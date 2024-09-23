@@ -18,7 +18,7 @@ function draw() {
  // Si el numero es 0.33 de volum, es convertirà en 100 de "h" o alçada de la boca o arc.
  // Si el numero es 0.67 de volum, es convertirà en 200 de "h" o alçada de la boca o arc.
  background(127);
- fill(255,223,196);
+ fill(205,133,63);
  ellipse(300,200,220,300);
  fill(255,255,255);
  ellipse(250,150,50,30);
