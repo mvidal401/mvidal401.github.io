@@ -20,9 +20,11 @@ function draw() {
  background(127);
  fill(205,133,63);
  ellipse(300,200,220,300);
+  fill(0,0,0);
+    arc(300,125,200,150,PI,0); // la variable "h" determina la alçada de la boca. 
  fill(255,255,255);
- ellipse(250,150,50,30);
- ellipse(350,150,50,30);
+ ellipse(250,150,75,30);
+ ellipse(350,150,75,30);
  fill(0,0,0);
  ellipse(250,150,20,10);
  ellipse(350,150,20,10);
