@@ -7,6 +7,7 @@ function setup() {
 }
 
 function draw() {
+  let faceX
  let vol = mic.getLevel(); // apliquem el mètode "getLevel" que ens donarà el nivell de volum entre 0 i 1
  // registrat pel objecte mic, que és una entrada de àudio. Aquest número el guardarem en una variable local
  // (perquè afecta només al draw a diferència de la variable global mic que afecta a tot el codi perquè està al principi.
@@ -29,10 +30,10 @@ function draw() {
  ellipse(250,150,20,10);
  ellipse(350,150,20,10);
  fill(255,0,0);
- arc(300,250,120,50,0,PI); // la variable "h" determina la alçada de la boca. 
+ arc(300,250,120,100,0,PI); // la variable "h" determina la alçada de la boca. 
  console.log(mic);
  console.log(vol);
  console.log(h);
- console.log(frameCount*0.1);
+ console.log(frameCount);
  // Els consoles.log ens serveixen per veure el valor de les variables a cada moment.
 }
