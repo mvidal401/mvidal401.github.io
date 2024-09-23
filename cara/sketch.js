@@ -19,9 +19,9 @@ function draw() {
  // Si el numero es 0.67 de volum, es convertirà en 200 de "h" o alçada de la boca o arc.
  background(127);
  fill(205,133,63);
- ellipse(300,200,220,300);
+ ellipse(300,200,520,300);
   fill(0,0,0);
-    arc(300,125,200,150,PI,0); // la variable "h" determina la alçada de la boca. 
+    arc(300,105,200,100,PI,0); // la variable "h" determina la alçada de la boca. 
  fill(255,255,255);
  ellipse(250,150,75,30);
  ellipse(350,150,75,30);
@@ -29,9 +29,10 @@ function draw() {
  ellipse(250,150,20,10);
  ellipse(350,150,20,10);
  fill(255,0,0);
- arc(300,250,120,h,0,PI); // la variable "h" determina la alçada de la boca. 
+ arc(300,250,120,50,0,PI); // la variable "h" determina la alçada de la boca. 
  console.log(mic);
  console.log(vol);
  console.log(h);
+ console.log(frameCount*0.1);
  // Els consoles.log ens serveixen per veure el valor de les variables a cada moment.
 }
