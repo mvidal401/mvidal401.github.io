@@ -120,10 +120,10 @@
             <!-- script vol dir que convio totalment de llenguatge de programació i deixem d'escriure HTML que té els simbols <> i que serveixen per fer estructures estatiques que no es mouen ni són interactives amb llenguatge Javascript-->
         function calculatePosition() {
         //agafar les dades introduides perl'usuari
-        let a1 = parseFloat (document.getElementById("a1").value); //longitud primer braç
-        let a2 = parseFloat (document.getElementById("a2").value); //longitud segon braç
-        let q1_deg = parseFloat (document.getElementById("a1").value); //angle en graus del primer braç
-        let q2_deg = parseFloat (document.getElementById("a1").value); //angle en graus del segon braç
+        let a1 = parseFloat(document.getElementById('a1').value); //longitud primer braç
+        let a2 = parseFloat(document.getElementById('a2').value); //longitud segon braç
+        let q1_deg = parseFloat(document.getElementById('q1').value); //angle en graus del primer braç
+        let q2_deg = parseFloat(document.getElementById('q2').value); //angle en graus del segon braç
             /* let ens permet crear variables locals perque estan dintre de una funció en quet cas (seria variabl global si estiguesi a principi del codi i afectes a tot el codi) que emmagatzzena els valors introduits per l'usuari perque a banda de fer getElementtById aplico el metode .value per asegurarme que agaafo el valo escrit i aplico la funció parseFloat per convertir el valor del l'usuari en un numero decimal o Floatng point number en anglès (si hages parseInt el convertiria en nombres enters).
             En aquet tros de codi de la linia 123 a la 127 hem aconseguit guardar les 4 dades geometriques del nostre robot per fer calculs de la seva posició en la funció de les 4 dades incluides per l'usuari*/
         //convertir graus a radiants per als calculs trigonometrics
