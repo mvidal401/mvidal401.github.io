@@ -22,7 +22,7 @@ function draw() {
  fill(191,133,77);
  ellipse(300,200,520,300);
   fill(0,0,0);
-    arc(300,105,200,100,PI,0); // la variable "h" determina la alçada de la boca. 
+    arc(300,105,200,100,PI,0); 
  fill(255,255,255);
  ellipse(250,150,75,30);
  ellipse(350,150,75,30);
