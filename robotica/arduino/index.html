@@ -1,3 +1,30 @@
+<html>
+  <head>
+    <style>
+      table{ 
+        width: 50%; // Ocupa el 50% de l'amplada de la pàgina
+        border-collapse: collapse; // Evita que apareixin dobles linies a les cel·les 
+        margin: 20px auto; // Marge de 20px a la part superior i centra la taula
+      }
+      th,td{
+        border: 1px solid #ddd; // Afegeix una vora fina d'un píxel de color gris clar al voltant de totes les cel·les (th i td).
+        padding: 10px;  // Espai intern dins de cada cel·la, per fer-la més llegible.
+        text-align: center // Centrar el text dins de cada cel·la. 
+        } 
+      thead{
+          background: #f4f4f4;  // Canvia el color del fons del thead a gris clar.
+          font-weight: bold;  // Fa que la capçalera de la taula estigui en negreta.
+          }
+      tbody tr: nth-child(even){  // És una pseudoclasse aplicada a tr segons si es parell o imparell, even és parell i odd és imparell.
+          background-color: #f9f9f9;
+          }
+      tbody tr: hover{  // És una pseudoclasse hover per quan passo per sobre amb el ratolí pel contingut de la taula és fa més fosc.
+        background-color: #e2e2e2;  
+      }
+          
+      
+    </style>
+  </head>
 <h1>Conceptes generals de microcontroladors</h1>
 <p>Els diferents microcontroladors tenen en comú els següents aspectes: </p>
 <ul>
@@ -47,13 +74,14 @@ sembla que generem un senyal analògic, això és la base del PwM</p>
     </tr>
   </tbody>
 </table>
-<p>Nota: la taula HTML anterior té una capçalera com un document HTML, però és diu thead, 
-en comptes de head i es la primera filera de la taula.
+<p>Nota: la taula HTML anterior té una capçalera com un document HTML, però és diu thead, en comptes de head i es la primera filera de la taula.
 Té un cos anomenat tbody, en comptes de body i és la resta de la taula. 
-La taula la defineix el tag table que agrupa thead i tbody. Totes les fileres
-tant del thead com el tbody es defineixen amb el tag tr, que vol dir table row.
+La taula la defineix el tag table que agrupa thead i tbody. Totes les fileres tant del thead com el tbody es defineixen amb el tag tr, 
+que vol dir table row.
 Dintre de thead hi ha elements individuals que són cel·les que pertanyen a la primera filera 
 i s'anomenen th o table heading. 
 En el table body hi ha també fileres tr però dintre d'aquestes fileres els elements individuals han de ser td,
 que significa table data. Per últim, s'han de tancar el table o el body. Tots aquests elements es poden
 modificar amb CSS i fer la taula amb un estil propi</p>
+</body>
+</html>
