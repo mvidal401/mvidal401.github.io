@@ -56,6 +56,19 @@ amb una Arduino Uno Rev3 aconseguim menys fluid i amb graons més grans, és a d
 són menys que 2048 volts. A continuació veurem una imatge que representa com combinant moltes senyals digitals ràpidament
 sembla que generem un senyal analògic, això és la base del PwM</p>
 
+<img src="pmw.PNG" widht="600" height="450">
+<p>Quan major és l'amplada del pols vol dir que major és el temps que la sortida digital està en voltatge alt,
+   per exemple 5V i menys temps està a 0V, i per tant el promig  de tots els polsos és més alt. En canvi si 
+   per exemple si cada pols és més estret a 5V vol dir que estarà més temps a 0V, i per tant el promig  de
+   tots els polsos és més baix. A la imatge de a dalt es pot veure com s'encendria un LED o un motor 
+   funcionaria a una velocitat del 10%, 30%, 50%, 90%. Quin percentatge del senyal canviara en un cas i 
+   en un altre?</p>
+  <ul>
+    <li>(0,01953125/5)*100 = 0,390625%</li>
+    <li>(0,00244140625/5)*100 = 0,048828125%</li>
+  </ul>  
+<p>A la taula a continuació veuras els valors per defecte de la freqüència PWM en Arduino Uno Rev3</p>
+
 <table>
   <thead>
     <tr>
@@ -90,7 +103,11 @@ modificar amb CSS i fer la taula amb un estil propi</p>
 <h2>Convertidor analògic - digital</h2>
   <p>Apliquem el teorema de Nyquist que diu que hem de fer el doble de mostres com a mínim que la freqüencia màxima per aconseguir convertir
   un senyal contínu analògic en un senyal digital mostrejat segons la figura següent</p>
-
+<img src="NYQUIST.png" width="600" height="400">
+  <p>Nyquist és important perque si en el codi poso una freqüència de mostreig de 20Hz per un so no funcionarà perque la
+  freqüència mínima del so es 20Hz i la màxima 20kHz perque es refereix al so audible en humans. Això es perque agafem 
+  mostres massa grans  i no podeem veure pujades i baixades de la senyal</p>
+  <p>A continuació veurem una taula comparativa sobre els microcontroladors Arduino Uno i ESP32S3 i el circuit ADS1115 
   <img src="adc.png">
 <table>
     <thead>
@@ -118,6 +135,46 @@ modificar amb CSS i fer la taula amb un estil propi</p>
       </tr>
     </tbody>
  </table>
+ <p>A continuació tenim un codi general que pot servir per moltíssimes coses diferents
+ i totes relacionades amb la capacitat que té l'Arduino de llegir de 0 a 1023 en una
+ entrada analògica, si fos un ESP32S3 llegiria de 0 a 4095 i si fos un ADS1115 llegiria
+ de 0 a 65536. Per què?
+ Els micro controladors i microxips tenen transistors només poden fer una cosa, encendre's
+ o apagar-se, és a dir, 0 o 1 i cada bit és un 0 o un 1. Si tenim 12 bits en un ADC (Analog Digital Converter)
+ significa que té 2 <sup>12</sup>combinacions de zeros i uns, és a dir, 4096 nivells diferents que numèricament van des
+ del 0 a 4095. Ara justifiquem el número 65536, seria correcta si fos 2<sup>16</sup> com diu el fabricant, però al datasheet
+ parla d'un nivell màxim de 8000h (número hexadecimal que correspon a 32768), és a dir, són 15 bits utilitzables. Sempre s'ha de
+ comprovar el <a href="https://cdn-shop.adafruit.com/datasheets/ads1115.pdf" datasheet o 
+ fulla de característiques del fabricant</a></p>
 
+<pre> <code>
+  int valor_ADC=0;  // int significa integer o valor enter numèric (float seria floating point number o decimal, char seria un character
+  o caràcter de lletra de l'alfabet, string seria una cadena de caracters o paraula, etc. El més important
+  es entendre que la primera paraula defineix el tipus de variable que tenim, en aquest cas enter). "valor_ADC" és un nom
+  que triem nosaltres per definir una variable, es a dir, un valor que no serà constant i que té inicialment un valor 0,
+  si posem int valor_ADC; es a dir no posem que és = a 0 per defecte hauria de donar valor 0. Si jo volgues posar un potenciometre
+  posaria pot i si volgues posar un LDR posaria ldr. Sempre la primera linia és la definició de les variables. A vegades
+  avanç de la primera linia necessitem carregar biblioteques.
+  void setup(){  // sempre hi ha un setup o funció de configuració del microcontrolador en llenguatge Arduino, que té un parèntesis buit
+  perquè no té cap paràmetre o argument del qual depengui en molts casos. La paraula void seria l'equivalent a la paraula function en 
+  JavaScript. També és diu void setup en Processing, perquè Arduino deriva de Processing. Posem una clau per agrupar totes les instruccions
+  que volem executar una sola vegada, perquè setup s'executa només al principi quan arranquem o encenem l'Arduino o el microcontrolador
+  Serial.begin(9600);  // Serial s'escriu en majúscules perquè és una classe, que és una part important del codi Arduino que antigament
+  era una classe de Processing i té un mètode que és fa servir amb la sintàxi del punt, dot syntax, que consisteix en que quan jo escric un 
+  punt estic aplicant un mètode normalment a un objecte d'una classe i a vegades a una classe, com aquí. El mètode begin connecta pel cable
+  sèrie l'ordinador amb l'Arduino i té només un paràmetre que és un número enter que correspon a la velocitat en bits/segon. Pel cas de l'Arduino
+  Uno, 9600 bits/segons o bauds, mentres que en ESP32S3 són 115200 bits/segon o bauds "Serial.begin(115200)". És molt important posar un ;
+  en cada instrucció per informar que ja s'ha acabat.
+  }
+  void loop (){  // és una funció que es repeteix sense parar fins que desconnecto físicament o poso un codi per aturar-ho
+  valor_ADC = analog.Read(A0);  // la variable que hem creat abans que era 0 inicialment ara canviarà perquè la instrucció analogRead
+  el que fa és llegir valors entre 0 i 1023 si és un Arduino Uno, A0 és una de les 6 entrades analògiques 
+  d'Arduino Uno.
+  valor_ADC=analogRead(34); // La variable de valor 0 ara serà un valor entre 0 i 4095 perquè 34 és el número de PIN d'un 
+  ESP32S3.
+  Serial-println(valor.ADC)
+  delay(500);
+</code></pre>
+  
 </body>
 </html>
