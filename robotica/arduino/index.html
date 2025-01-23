@@ -172,9 +172,27 @@ modificar amb CSS i fer la taula amb un estil propi</p>
   d'Arduino Uno.
   valor_ADC=analogRead(34); // La variable de valor 0 ara serà un valor entre 0 i 4095 perquè 34 és el número de PIN d'un 
   ESP32S3.
-  Serial-println(valor.ADC)
-  delay(500);
+  // DAC és Digital Analog Converter, és a dir el contrari que ADC, convertim digital a analògic com el PwM (Pulse With Modulation)
+  que vol dir modulació de l'ample de banda.
+  // D'acord amb el <a src = "https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf"> datasheet o fulla de característiques de ESP32S3 </a>
+  // Hi ha 20 entrades analògiques de 12 bits mentres que en Arduino Uno hi ha 6 entrades analògiques de 10 bits.
+  Serial-println(valor.ADC) // Println significa que imprimeixi via serial el valor de ADC (0-1023 o 0-4095)
+  delay(500); // Espera 500 mil·lisegons o mig segon per mostrar el resultat.
 </code></pre>
-  
+  <p>Com podem veure a la foto de més amunt d'Arduino a la cantonada inferior dreta es troben els 6 ADCs o entrades analògiques amb
+  les lletres d'A0 fins A6, i a la part superior de l'Arduino podem veure els pins que son els 6 DACs o sortides analògiques de
+  tipus PwM que estan senyalats< amb - (Pins: 3, 5, 6, 9, 10, 11).</p>
+    <p>En la imatge següent podem veure un esquema de ESP32S3</p>
+    <img src = "" width = "800" height = "600">
+    <p>Podem observar que a diferència d'Arduino Uno la gran majoria de pins són GPIO, que significa "General Purpose Input Output", 
+    que en català és Pin d'Entrada i Sortida de Propòsit General, és a dir, que pot tenir moltes utilitats, entrada digital,
+    sortida digital, entrada analògica, sortida analògica. Si volem veure un esquema dels pins podem escriure "pinout".</p>
+    <p>Alguns pins són RTC, que significa Real Tme Clock, que és un rellotge intern que funciona mitjançant una pila interna
+    que dona suficient</p>
+
+   <!-- Scripts necessaris -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
