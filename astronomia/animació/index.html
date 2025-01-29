@@ -369,7 +369,26 @@
             this.distance = Math.random() * 150 + 50; // Distància des del centre
             this.speed = Math.random() * 0.02 + 0.01; // Velocitat de rotació base
         }
+	 // El constructor té l'avantatge de que es poden fer herències més fàcilment
+	 class SpiralGalaxy extends Galaxy{
+	    constructor (x, y, size, arms){
+	    super (x, y, size);
+	    this.arms = arms;  // "this" és una propietat que identifica els arguments propis interns de la classe
+	    }}
 
+	    /* A partir de 2022 va canviar tot, les classes en JavaScript van agafar una síntaxi anomenada camps de classe (class fields)
+	    que permeten declarar variables fora del constructor i a vegades sense el constructor i permet encapsular les dades
+	    privades amb un # davant. */
+
+	#speed // seria una propietat privada més segura i més encapsulada
+	#calculaPosició()  // seria un mètode privat. El JavaScript a partir del 2022 és ES13+ (el DNI o número de compte bancari).
+
+	/* "initGalaxy" és una funció que només té un paràmetre intern que té el número de galàxies i és un paràmetre intern.
+	    Dintre del codi el primer que fem és definir un array [], que és una llista d'elements que inicialement està buida
+	    Fem un bucle for(), és una estructura iterativa que repeteix des de i = 0 fins que arribi al número i = numGalaxies i 
+	    va augmentant de un en un perquè és el que significa i++ que també es podria posar i = i+1 */
+	/* Per cada galàxia que creem dintre del bucle for() fem un .push que és aplicar als objectes que creem de la classe Galaxy
+	   de forma que new Galaxy crea un objecte
         // Inicialitzem les galàxies
         function initGalaxies(numGalaxies) {
             galaxies = [];
