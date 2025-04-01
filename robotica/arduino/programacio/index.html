@@ -1,76 +1,150 @@
 <!DOCTYPE html>
-<html lang="ca">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
-    <script>hljs.highlightAll();</script>
-    <title>Web de Teo</title>
-    <style>
-body {
-    padding: 0; /* Elimina l'espai extra al voltant del cos */
-    font-family: Arial, sans-serif; line-height: 1.6; margin: 20px;
-}
-pre { background: #f4f4f4; padding: 10px; overflow-x: auto; position: relative; }
-code { font-family: monospace; }
-.copy-btn {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    color: #007bff;
-}
-.container-fluid {
-    max-width: 100%; /* Assegura que la navbar ocupa tota l'amplada */
-}   
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Montserrat:wght@700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
+  <script src="https://mszabo4.github.io/robotica/arduino/programacio/arduino.min.js"></script>
+
+  <script>hljs.highlightAll();</script>
+  <title>Programació</title>
+<style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #0f172a, #1e293b);
+      color: #e2e8f0;
+      margin: 0;
+      padding: 0;
+    }
+
     .navbar {
-    padding-left: 0; /* Elimina el padding esquerra de la navbar */
-}
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(45deg, #1e40af, #0ea5e9);
+      padding: 12px 24px;
+      border-bottom: 4px solid #38bdf8;
+      z-index: 10;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
 
-.logo {
-    margin-right: 20px; /* Ajustar el marge si vols separar el logo del text */
-    margin-left: 0; /* Assegurar que no hi hagi marge a l'esquerra */
-}
-.navbar-brand {
-    display: flex;
-    align-items: center;
-}
-.brand-text {
-    white-space: nowrap; /* Això assegura que el text no es trenqui en múltiples línies */
-    font-size: 1.25rem; /* Ajusta la mida de la font si és necessari */
-}  
-.content-container {
-            margin-left: 10px;
-            margin-right: 10px; /* Marges laterals ajustats */
-            margin-top: 20px; /* Afegeix espai superior entre el contingut i la barra de menú */
-        }
-table{
-    width: 50%;
-    bodrder-collapse: collapse;
-    margin: 20px auto;
-}
-th,td{
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center
-}
-thead{
-    background: #f4f4f4;
-    font-weight: bold;
-}
-tbody tr:nth-child(even){
-    background-color: #f9f9f9;
-}
-tbody tr:hover{
-    background-color: #e2e2e2;
-}
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      color: #ffffff !important;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      transition: color 0.3s ease-in-out;
+    }
 
-    </style>
+    .navbar-brand:hover {
+      color: #38bdf8 !important;
+    }
+
+    .nav-link {
+      color: #ffffff !important;
+      font-weight: 600;
+      margin-right: 15px;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #38bdf8 !important;
+    }
+
+    .content-container {
+      margin: 140px auto 50px auto;
+      padding: 40px;
+      max-width: 900px;
+      background-color: #1e293b;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      border-radius: 15px;
+      border-left: 5px solid #38bdf8;
+      border-right: 5px solid #38bdf8;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    h1 {
+      color: #0ea5e9;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .custom-button {
+      background: linear-gradient(135deg, #0ea5e9, #1e40af);
+      color: white;
+      border: none;
+      padding: 18px 40px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 50px;
+      font-weight: bold;
+      text-transform: uppercase;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .custom-button:hover {
+      background: linear-gradient(135deg, #38bdf8, #1e40af);
+      transform: scale(1.1);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    table {
+      width: 60%;
+      border-collapse: collapse;
+      margin: 20px auto;
+      background-color: #1e293b;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th, td {
+      border: 1px solid #0ea5e9;
+      padding: 12px;
+      text-align: center;
+      color: #e2e8f0;
+    }
+
+    thead {
+      background: #0ea5e9;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #172030;
+    }
+
+    tbody tr:hover {
+      background-color: #0f172a;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+</style>
     <script>
         function copyCode(button) {
             const codeBlock = button.nextElementSibling.innerText;
@@ -81,45 +155,62 @@ tbody tr:hover{
         }
     </script>
 </head>
+
 <body>
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-     <div class="container-fluid">
-       <a class="navbar-brand d-flex align-items-center" href="#">
-    <img src="/files/images/logo.png" alt="Logo" width="50" class="logo">
-    <span class="brand-text">Web de Teo</span>
-</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Inici</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Tema 1</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">Projectes</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Projecte 1</a>
-                        <a class="dropdown-item" href="#">Projecte 2</a>
-                        <a class="dropdown-item" href="#">Projecte 3</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Tema 2</a>
-                </li>
-            </ul>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="https://mszabo4.github.io">
+                <img src="https://mszabo4.github.io/logo.png" alt="Logo" width="50">
+                Web de Miguel Angel
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul.n class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://mszabo4.github.io">Inici</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Programació
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="https://mszabo4.github.io/cara">Cara interactiva</a>
+                            <a class="dropdown-item" href="https://mszabo4.github.io/cara1">Cara interactiva nova</a>
+                            <a class="dropdown-item" href="https://mszabo4.github.io/ocell">Ocell</a>
+                            <a class="dropdown-item" href="https://mszabo4.github.io/reproducer">Coldplay</a>
+                            <a class="dropdown-item" href="https://mszabo4.github.io/astronomia">Astronomia</a>
+                            <a class="dropdown-item" href="https://mszabo4.github.io/astronomia/animacio">Astronomia</a>
+                            <a class="dropdown-item" href="https://mszabo4.github.io/openair">Openair</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Robòtica
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                            <a class="dropdown-item" href="https://mszabo4.github.io/robotica/cdirecte">Cinemàtica
+                                directa</a>
+                            <a class="dropdown-item" href="https://mszabo4.github.io/robotica/cinversa">Cinemàtica
+                                inversa</a>
+                            <a class="dropdown-item" href="https://mszabo4.github.io/reproducer">Coldplay</a>
+                            <a class="dropdown-item" href="https://mszabo4.github.io/robotica/arduino">Arduino</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                    </li>
+                </ul.n>
+            </div>
         </div>
-    </div>
-</nav>
-<!-- Contingut principal -->
-<div class="content-container">
-<h3>El meu primer codi: Blink</h3>
+    </nav>
+
+    <div class="content-container">
+        <h3>El meu primer codi: Blink</h3>
         <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
 //El meu primer codi: Blink
 void setup() { //Codi que s'executa una vegada i és la configuració.
@@ -435,7 +526,7 @@ void loop() {
         // numFlashes no esta definit com a variable global, és una variable local definida dins de la funció "flash"
         // i no te un valor predeterminat, només ha de complir que sigui un valor enter. El mateix per a la variable "d"
         void flash(int numFlashes, int d) {
-            for (int i = 0; i &lt; numFlashes; i++) {
+            for (int i = 0; i numFlashes; i++) {
             digitalWrite(ledPin, HIGH);
             delay(d);
             digitalWrite(ledPin, LOW);
@@ -444,8 +535,7 @@ void loop() {
             }
 
         </code></pre>
-    </div>
-    
+
         <div class="content-container">
             <h1>Funcions en Arduino</h1>
             <p>Les funcions d'arduino són semblants a les funcions que veiem a cinemàtica directa i inversa. En el cas de la cinemàtica robòtica 
@@ -455,7 +545,7 @@ void loop() {
                 flash amb dos peràmetres que eren números enters anomenat ledPin i de delayPeriod que identifiquen el pin que està connectat i el 
                 temps que ha d'estar encès o apagat.
             </p>
-            <p> Ara farem que un bucle for ss'executi 20 o x vegades dintre d'unbucle for localitzat dintre d'un bucle infinit loop. Ho aconseguim 
+          <p> Ara farem que un bucle for ss'executi 20 o x vegades dintre d'unbucle for localitzat dintre d'un bucle infinit loop. Ho aconseguim 
                 amb la paraula clau static, que fa que una variable s'inicialitzi una vegada que correm el codi  i mai més. La paraula static es deriva 
                 del llenguatge C i Arduino és un derviat de C++ i Processing, </p>
         <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
@@ -586,114 +676,171 @@ void flash(int duration) {
                     eosztmo(1, 200); //Això és la e
                 }
             </code></pre>
-            <table>
-            <thead>
-                <tr>
-                    <th>ASCII</th>
-                    <th>DECIMAL</th>
-                    <th>BINARI</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>A-Z</td>
-                    <td>65-90</td>
-                    <td>1000001-1011010</td>
-                </tr>
-                <tr>
-                    <td>a-z</td>
-                    <td>97-122</td>
-                    <td>1100001-1111010</td>
-                </tr>
-                <tr>
-                    <td>0-9</td>
-                    <td>48-57</td>
-                    <td>110000-111001</td>
-                </tr>
-                <tr>
-                    <td>espai</td>
-                    <td>32</td>
-                    <td>100000</td>
-                </tr>
-            </tbody>
-            </th>
+        </div>
+        <div class="content-container">
+        <p>L'objectiu del codi següent és entendre que les cadenes o strings són conjunts de caràcters ASCII i podem accedir
+        amb ells amb arrays que estan formats per parèntesis quadrats i el primer element és el 0. En llenguatge C i derivats
+        del C com Arduino podem utilitzar punters o pointers que permeten apuntar a un element. En python o JavaScript no hi ha punters</p>
+       <p>A continuació veuras els caracter ASCII en una taula, que son els utilitzats en els strings o cadenes</p>
+       <p>La taula següent està basada en un codi binari de 7 bits, perque 2 elevat a 7 (2^7) es 128, hi hauran desde 0 a 
+               127 caràcters diferents</p>
+        <table>
+        <thead>
+        <tr>
+        <th>ASCII</th>
+        <th>DECIMAL</th>
+        <th>BINARI</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <td>A-Z</td>
+            <td>65-90</td>
+            <td>0b000001-0b1011010</td>
+         </tr>
+        <tr>
+            <td>a-z</td>
+            <td>97-122</td>
+            <td>0b110000-0b11001</td>
+        </tr>
+        <tr>
+            <td>espai</td>
+            <td>32</td>
+            <td>0b0100000</td>
+        </tr>
+        </tbody>
         </table>
-                    <p>ASCII significa American Standard Code for Information Interchange i va ser descrit a l'any 1967 amb l'objectiu 
+        <p>ASCII significa American Standard Code for Information Interchange i va ser descrit a l'any 1967 amb l'objectiu 
             d'intercambiar informació amb ordinadors</p>
         <p>UTF8 és un sistema Unicode Transformation Format que permet escriure més d'un milió de caràcters diferents
-            “🙂” U+1F642</p>
-            <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
-                // sketch 05-03
+            “🙂” U+1F642</p>       
+        <div class="content-container">
+        <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
 
-                char message[] = "Hello"; //Hi ha una array simbolitzada per "[]" que conté caràcters "char". Cada caracter d'ASCII te assignat un valor de 7 bits.
-                                          //Un valor de 7 bits va de 0 a 127 ja que 2^7 es 128. La "H" es 72, la "e" 101, etc...
-                                          //Per especificar el final de paraula posem un 0
-                
-                void setup() {
-                  Serial.begin(9600);
-                  message[0] = 'h';
-                }
-                
-                void loop() {
-                  Serial.println(message);
-                  delay(1000);
-                }
-            </code></pre>
 
-            <h3>Importància dels punters + Exemple de codi Morse</h3>
-            <p>Hi ha llenguatges amb i sense punters.</p> 
-            <ul>
-                <li>Exemples de llenguatges amb punters: C i els seus derivats com arduino</li>
-                <li>Exemples de llenguatges sense punters: Python i Javascript</li>
-            </ul>
-            <p>El punter llegeix el contingut d'una adreça de memoria i tambe la posició de la mateixa adreça i pot manipular-la. Hi ha posicions d'adreçes especials, com els sectors d'arrancada.</p>
-            <p>El punter serveix per tenir el control total per part del programador de la memoria i els recursos de l'ordinador</p>
-            <p>El "Problema" que te es que pot provocar errors a la memoria o accesos no permesos si no saps com fer funcionar correctament el punter</p>
-            <p>Els dos símbols per utilitzar punters son: L'arterisc "*", que serveix per llegir el contingut de l'adreça de memoria. I l'ampersand "&", que llegieix la posició de l'adreça de memoria</p>
-            <p>La memoria de l'ordinador la podem imaginar com caixes d'una llista on cada caixa te un valor unic assignat en hexadecimal que comença per 0x. Cada caixa te un contingut que pot ser buit (0) o pot contenir un valor</p>
-            
-            <h4>Operacions avançades amb punters</h4>
-            <ul>
-                <li><b>Accés directe a la memoria:</b> Permet modificar valors en posicions especifiques.</li>
-                <li><b>Manipulació eficient d'arrays i strings (cadenes):</b> L'array esencialment es una llista adreçes amb principi i final amb un punter al primer element.</li>
-                <li><b>Passar grans quantitats de dades a funcions:</b> En lloc de copiar valors, els punters passen la seva adreça, estalviant memoria i temps. Aquest es un dels motius per els que C i derivats son mes rapids que python o JS.</li>
-                <li><b>Creació d'estructures dinamiques:</b> Es pot crear coses com grafics o llistes enllaçades de forma facil</li>
-                <li><b>Interacció amb microcontroladors senzilla:</b> Els microcontroladors utilitzen llenguatges de baix nivell (low-level languages) que son mes properes al hardware. Encara que, gracies a l'augment de la memoria, s'han pogut crear llenguatges com micropython o circutpython.</li>
-            </ul>
-            <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
-                const int ledPin = 13;
-const int dotDelay = 200;
+            // sketch 05-03
 
+           char message[] = "Hello"; //Hi ha u
+
+           void setup() {
+           Serial.begin(9600);
+           message[0] = 'h';
+           }
+
+           void loop() {
+           Serial.println(message);
+           delay(1000);
+            }
+        </div>
+ <div class="content-container">
+        <h3>Importància dels punters + Exemple de codi Morse</h3>
+   <p>Hi ha llenguatges amb i sense punters.</p>
+   <ul>
+     <li> Exemples de llenguatges amb: C i els seus derivats com Arduino</li>
+     <li> Exemples de llenguatges sense: Python i JavaScript</li>
+   </ul>
+   <p>El punter llegeix una adreça a la memòria de l'ordinador i la posició de l'adreça d'ordinador, i manipular-la</p>
+   <p>El punter serveix per tenir un control total per part del programador de la memòria i els recursos de l'ordinador</p>
+   <p>El problema que té és que pot provocar errors a la memòria o accesos no pemesos si no saps com fer funcionar correctament el punter</p>
+   <p>Els dos símbols per utilitzar punters són: L'arterisc '*', que serveix per llegir el contingut de l'adreça de memòria. I l'ampersand '&', que llegeix la posició de l'adreça de memòria/p>
+   <p>La memòria de l'ordinador la podem imaginar com caixes d'una llista on cada caixa té un valor unic assiganat en hexadecimal que comença per 0x. Cada caixa té un contingut que pot ser buit(0) o pot contenir un valor</p>
+
+   <h4>Operacions avançades amb punters</h4>
+   <ul>
+   <li><b>Accés directe a la memòria:</b> Permet modificar valors en posicions específiques.</li>
+   <li><b>Manipulació eficient d'arrays i strings (cadenes):</b> L'array és en una lista d'adreces amb principi i final amb un punter al primer element</li>
+   <li><b>Passar grans quantitats de dades a funcions:</b> En lloc de copiar valors, els punters passen la seva adreça, estalviant memòria i temps. Aquest és un dels motius per els que C i derivats són més ràpids que Pytho.</li>
+   <li><b>Creacció d'estructures dinàmiques:</b> És pot crear coses com llistes enllaçades, grafics... de forma més fàcil</li>
+   <li><b>Interacció amb microcontroladors senzilla:</b> Els microcontroladors utilitzen llenguatgges de baix nivell (lox-level languages) que són més propers al hardware. Encara qué, gràcies a l'augment de la memòria, s'han pogut crear llenguatges com microPython o circuitPython </li>
+   </ul>
+   
+   <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
+// Al principi del codi, abans de la funció de configuració "setup" i la funció principal 
+// "loop" que s'executa continuament, hem d'escriure sempre variables o constants.
+// A més, al principi del codi trobem les constants i variables globals, anomenades així perquè es poden cridar
+// o executar des de qualsevol part del codi, a diferencia de les variables locals que es 
+// defineixen i s'utilitzen dintre de la mateixa funció "loop" o una funció addicional.
+// Davant de les variables i constants globals hauriem d'afegir les biblioteques necessàries per 
+// fer funcionar el nostre codi ( amb "#include <nom_biblioteca.h> ) l'extensió "h" deriva de C
+// i significa "biblioteca de headers" o encapçalaments.        
+     const int ledPin = 13;
+const int dotDelay = 200
+
+// "const" vol dir que la variable no es modificarà dins del codi, "int" vol dir integer, o sigui
+// que el nombre que agafem haurà de ser enter, ja que els pins tenen números enters. El pin 13
+// és especial, té una resistència interna en el cas d'Arduino uno que permet connectar directament
+// un led, perquè està al costat del pin GND i puc clavar o connectar un led sense cap circuit o placa.
+// "ledPin" és una variable constant i s'anomena així per l'usuari, utilitzant camelCase i referint-nos
+// al que fa aquest pin.
 char* letters[] = {
   ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..",    // A-I
   ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.",  // J-R
   "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."          // S-Z
 };
-
-char* numbers[] = {
+// Més amunt i més abaix tinc dos arrays composats cadascun d'ells per arrays interns i cada array intern
+// està composat de caracters que només poden ser "." o "-".
+// Quan jo crido "letter[0]" el que obtinc ".-" o sigui, la lletra A en codi Morse.
+// Aquesta forma de treballar és molt dolenta, des d'un punt de vista d'eficiència perquè estic utilitzant.
+// un byte ( un byte són 8 bits ) sencer per cada punt o ratlla. 
+// Un bit és un valor de 0 o 1 i això es podria utilitzar per fer els punts o ratlles perquè els dos valors
+// són dos estats, o 0 o 1, es podria asignar el 0 al punt i la ratlla l'1, fent-ho més eficient.
+// En un byte hi han 8 bits i per això es podrien fer 256 caracters diferents.
+// Quants bytes de memòria necesitarem utilitzant bytes o bits per codificar Morse?
+// Aproximadament el Morse té uns 109 punts o ratlles pels números o lletres, de la manera més eficient
+// tindriem un ús de 14 bytes i de la manera menys eficient 872 bytes.
+// Hem de tenir en compte
+// De fet ASCII utilitza 7 bits per crear 128 caracters ( de 0 a 127 ).
+// "*" és molt important, ja que ens indica que és un punter, "[]" ens indica que és una array,
+//  "numbers" m'indica el valor de l'array, i char m'indica el tipus d'element ( que són caracters ) que hi ha dins
+// de l'array.
+// L'array de sota es diu numbers però està constituit per caracters, perquè tant els números com les lletres
+// estan constituides per "." o "-" que són caracters
+  char* numbers[] = {
   "-----", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----."};
 
 void setup() {
   pinMode(ledPin, OUTPUT);
   Serial.begin(9600);
+  // En el setup o configuració del microcontrolador indiquem que el pin 13 que ara es diu "ledPin" sigui és una sortida o "Output"
+  // Indiquem a l'arduino que es comuniqui amb l'ordinador a traves del port serial o serie i comenci a una velocitat de 
+  // 9600 bauds o simbols/segon que són aprox. 9600 bits/segon.
 }
+  
 
 void loop() {
-// El loop és el codi principal, i el que el seu nom indica que es repeteix sense parar en un "loop". "char" significa que utilitzem una variable de tipus caràcter i l'anomenem <b>ch</b>. "Serial.available" significa si està disponible la comunicació sèrie o un 'serial monitor' que comunica el microcontrolador aArduin amb el nostre dispositiu (ordinador)
-// La comunicació entre Arduino i l'ordinador és complexa:
-// Primer pas: L'ordinador envia dades al monitor sèrie a traves del USB per un mecanisme que s'anomena 'USB to Serial'
-// Segon pas: La transfornació anterior 'USB to Serial' ho fa un xip especial dins d'Arduino
-// Tercer pas: Les dades en format sèrie arriven a una part del microcontrolador anomenada 'UART' que significa Univeral Asynchronous Receiver Transmiter
-// Quart pas: Envia les dades que rep a una memória temporal o 'buffer' que pot emmagatzemar 128 bytes fins que s'elimina en el moment que es llegeix
-// La funció serial available retorna el número de bytes de dades en el 'buffer' que estan esperant per ser llegits. Si no hi ha cap missatge esperant a ser llegit, la funció retorna a 0
-// La funció 'Serial.read' el que fa és llegir el primer o el següent caràcter disponible i l'emmagatzema a la variable "ch"
-// El símbol >= o <= s'utilitza per comparar amb el número d'ASCII que correspon a la lletra 'a' per tant, podriem canviar l'a pel número 97 i la z el número 122. Els altres caràcters que podem canviar serien 'A' (mayus) pel número 65 i 'Z' (mayus) pel número 90. El caràcter '0' correspon al número 48 i el caràcter '9' correspon al 57. El caràcter ' ' (espai en blanc) correspon al número 32
-// Els condicionals que hi ha dins del condicional general "Serial.available" el que fan és dir si es caràcter és entre la a i la z, li restes el valor menys a. Imaginem que la lletra és una 'c', que equival al número 99, llavors li restem la 'a' que és 97 quedaria el número 2, que està dins d'un [] és a dir dins d'un array i correspondria al tercer element de l'array de les lletres. Aquest tercer element és "-.-."
-// Un altre exemple 'H' estaria evaluat en un altre condicional (el de les majúscules), aquest caràcter equivilaria al número 72 i li hem de restar 'A' que equival a 65, per tant ch- 'A' és 7, que és el vuité element de l'array de majúscula [7] i letters[7] és "...."
-// Per què s'ha de restar? 
-// Per conèixer la posició de la lletra a l'array, perquè he possat l'array ordenat des de la 'a'-'z' i des de la 'A'-'Z'
-// Ara tenim el número per exemple letters [7] igual a "...." i el que volem és aplicar una funCió.
-  char ch;
+  // El loop és el codi principal, i el que el seu nom indica que es repeteix sense parar en un "loop".
+  // "char" signica que utilitzem una variable de tipus caracter i l'anomenem "ch".
+  // "Serial.available" significa si està disponible la comunicació serie o "serial monitor" que comunica  el microcontrolador
+  // arduino amb el nostre ordinador o dispositiu.
+  // La comunicació entre arduino i l'ordinador és complexa: 
+  // Primer pas: l'ordinador envia dades al monitor serie a traves de l'USB per un mecanisme que s'anomena "USB to Serial"
+  // Segon pas: la transformació anterior d'USB to Serial la fa un xip especial dintre d'Arduino.
+  // Tercer pas: les dades en format serie arriben a una part del microcontrolador anomenada UART que significa 
+  // "Universal Asynchronous Receiver Transmiter"
+  // Quart pas: l'UART envia les dades que rep a una memòria temporal o "buffer" que pot enmagatzemar 128 bytes fins que s'elimina en
+  // el moment que es llegeix. 
+  // La funció serial available retorna el número de bytes de dades en el "buffer" que estan esperant per ser llegits. Si no hi ha cap missatge
+  // esperant a ser llegit, la funció retorna a 0
+  // La funció "Serial.read" el que fa és llegir el primer o el següent caracter disponible i l'emmagatzema a la variable "ch"
+  // El símbol >= o <= s'utilitza per comparar amb el número d'ASCII que correspon per la lletra "a" per tant, podriem canviar l'a
+  // pel número 97 i la z és el número 122.
+  // Els altres caracters que podem canviar serien 'A' pel número 65, Z pel número 90.
+  // El caracter '0' correspon al número 48 i el caracter '9' correspon al número 57.
+  // El caracter ' ' correspon al número 32.
+  // Els condicionals que hi han dintre del condicional general "Serial.avaliable" el que fan és dir es que si el caracter és 
+  // entre la a i la z le restes el valor -a
+  // Imaginem que la primera lletra és una 'c', que equival al número 99, llavors si li restem la 'a' que és 97 quedaria un número 2.
+  // El número 2 està dintre d'un ([]) és a dir, dintre d'una array i correspondria al tercer element de l'array de les lletres.
+  // Aquest tercer element és "-.-."
+  // Un altre exemple seria la 'H' estaria avaluat en un altre condicional, el de les mayuscules, aquest caracter equival 
+  // al número 72, i li he de restar la 'A' que equival al número 65, per tant ch - 'A' és 7 que és el vuité element de l'array
+  // de majúscula [7] i letters[7] és "...." .
+  // Per qué s'ha de restar?
+  // Per conexier la posició de la lletra a l'array, perquè hem possat l'array ordenat 
+  // des de la 'a' fins la 'z' i des de la 'A' fins la 'Z'
+  // Ara tenim el número per exemple letters[7] igual a "...." i el que volem és aplicar una funió.
+    char ch;
   if (Serial.available() > 0) {
     ch = Serial.read();
     if (ch >= 'a' && ch <= 'z') {
@@ -732,11 +879,12 @@ void flashDotOrDash(char dotOrDash) {
   digitalWrite(ledPin, LOW);    
   delay(dotDelay); // gap between flashes
 }
-            </code></pre>
+        <!-- Scripts necessaris -->
 
-</div>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
 </body>
+
 </html>
