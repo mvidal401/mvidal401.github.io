@@ -8,7 +8,18 @@
 
 
      <style>
-        
+         
+    .titulo-centrado {
+    display: block;
+    text-align: center;
+}
+
+.titulo-izquierda {
+    display: block;
+    text-align: left;
+    margin-left: 10px; /* Ajusta si es necesario */
+}
+ 
 body {
     font-family: 'Arial', sans-serif;
     text-align: center;
@@ -133,11 +144,15 @@ footer {
         </div>
     </div>
 </nav>
-    <h1>Web de Martí </h1>
-    <p>Benvingut a la meva web!</p>
-    <p>Em dic Martí i sóc alumne de robòtica i programació de 1r de batxillerat tecnològic de <a href=https://agora.xtec.cat/ies-pompeu-fabra-martorell/">l'Institut Pompeu Fabra</a></p>
-    <p>A continuació veuràs un llistat amb diferents projectes que farem durant el curs:</p>
-    <ul>
+   <header>
+    <h1>
+        <span class="titulo-centrado">Web de Martí</span><br>
+        <span class="titulo-centrado">Benvingut a la meva web!</span><br>
+        <span class="titulo-izquierda">Em dic Martí i sóc alumne de robòtica i programació de 1r de batxillerat tecnològic de <a href=https://agora.xtec.cat/ies-pompeu-fabra-martorell/">l'Institut Pompeu Fabra</a></p></span><br>
+        <span class="titulo-izquierda">A continuació veuràs un llistat amb diferents projectes que farem durant el curs:</span>
+    </h1>
+</header>
+<ul>
     <li>Creació d'una obra d'art geomètrica interactiva que reaccioni a la meva veu a través d'un micròfon i a diferents tecles del teclat, al ratolí, que faci moviments repetitius amb sin i cos, moviments aleatoris amb random... Utilitzarem p5.js.</li>
         <li>Aliments ecològics i convencionals amb C++.</li>
         <li>Contaminació atmosfèrica d'una ciutat catalana amb R.</li>
