@@ -16,6 +16,98 @@
 
   <script>hljs.highlightAll();</script>
   <title>Programació</title>
+<style>
+  body {
+    font-family: sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2563eb;
+    padding: 12px 24px;
+    color: white;
+    font-weight: bold;
+  }
+
+  .navbar-brand {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+  }
+
+  .nav-link {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+  }
+
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+
+  .content-container {
+    margin: 100px auto 40px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: white;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2563eb;
+  }
+
+  .custom-button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+
+  .custom-button:hover {
+    background-color: #1d4ed8;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    background-color: #f1f5f9;
+  }
+
+  th, td {
+    border: 1px solid #cbd5e1;
+    padding: 10px;
+    text-align: center;
+  }
+
+  thead {
+    background-color: #2563eb;
+    color: white;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #e2e8f0;
+  }
+
+  tbody tr:hover {
+    background-color: #cbd5e1;
+  }
+</style>
 
     <script>
         function copyCode(button) {
