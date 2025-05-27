@@ -1,0 +1,303 @@
+
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Figures irregulars per sentiment</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/ml5js/Intro-ML-Arts-IMA@ml5-build-10-7-19/ml5_build/ml5.min.js"></script>
+  <style>
+    body { margin: 0; padding: 0; overflow: hidden; background: #f0f0f0; }
+    #loading-screen {
+      position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+      background: rgba(255,255,255,0.95); display: flex; flex-direction: column;
+      justify-content: center; align-items: center; font-family: Arial, sans-serif; z-index: 1000;
+    }
+    .loader {
+      width: 40px; height: 40px; border: 5px solid #3498db; border-top-color: transparent;
+      border-radius: 50%; animation: spin 1s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    #loading-screen p { margin-top: 15px; font-size: 1.1em; color: #333; }
+  </style>
+</head>
+<body>
+  <div id="loading-screen">
+    <div class="loader"></div>
+    <p>Carregant models...</p>
+  </div>
+  <script>
+    let faceapi, detections = [], video;
+    let modelsReady = false;
+    let currentExpression = { dominant: 'neutral', intensity: 0 };
+    let smoothIntensity = 0;
+
+    // Traducció d'emocions a català
+    const emotionsCA = {
+      happy: "feliç",
+      sad: "trist",
+      angry: "enfadat",
+      surprised: "sorprès",
+      disgusted: "fastiguejat",
+      fearful: "espantat",
+      neutral: "neutral"
+    };
+
+    // Emoticones per cada emoció
+    const emotionsEmoji = {
+      happy: "😄",
+      sad: "😢",
+      angry: "😠",
+      surprised: "😲",
+      disgusted: "🤢",
+      fearful: "😱",
+      neutral: "😐"
+    };
+
+    function setup() {
+      createCanvas(windowWidth, windowHeight);
+
+      video = createCapture(VIDEO);
+      video.size(320, 240);
+      video.hide();
+      video.elt.muted = true;
+      video.elt.playsinline = true;
+
+      const options = { withLandmarks: false, withExpressions: true, withDescriptors: false };
+      faceapi = ml5.faceApi(video, options, () => {
+        modelsReady = true;
+        document.getElementById('loading-screen').style.display = 'none';
+        faceapi.detect(gotResults);
+      });
+    }
+
+    function windowResized() {
+      resizeCanvas(windowWidth, windowHeight);
+    }
+
+    function gotResults(err, results) {
+      if (err) {
+        console.error(err);
+        document.getElementById('loading-screen').innerHTML =
+          '<p style="color: red">Error! Comprova la càmera i actualitza.</p>';
+        return;
+      }
+      detections = results;
+      if (detections.length > 0) updateCurrentExpression();
+      faceapi.detect(gotResults);
+    }
+
+    function updateCurrentExpression() {
+      let maxIntensity = 0;
+      detections.forEach(face => {
+        const expr = face.expressions;
+        const dominant = Object.keys(expr).reduce((a, b) => expr[a] > expr[b] ? a : b);
+        if (expr[dominant] > maxIntensity) {
+          currentExpression = { dominant: dominant, intensity: expr[dominant] };
+          maxIntensity = expr[dominant];
+        }
+      });
+    }
+
+    function draw() {
+      background(240);
+
+      // Transició suau de la intensitat
+      smoothIntensity = lerp(smoothIntensity, currentExpression.intensity, 0.1);
+
+      // Dibuixa la figura geomètrica gran centrada segons el sentiment
+      push();
+      translate(width/2, height/2);
+      switch(currentExpression.dominant) {
+        case 'happy':      figuraFelic(smoothIntensity); break;
+        case 'sad':        figuraTrist(smoothIntensity); break;
+        case 'angry':      figuraEnfadat(smoothIntensity); break;
+        case 'disgusted':  figuraFastiguejat(smoothIntensity); break;
+        case 'surprised':  figuraSorprès(smoothIntensity); break;
+        case 'fearful':    figuraEspantat(smoothIntensity); break;
+        default:           figuraNeutral(smoothIntensity); break;
+      }
+      pop();
+
+      // Mostra el vídeo petit a la cantonada inferior dreta
+      let vW = 160, vH = 120;
+      let margin = 20;
+      imageMode(CORNER);
+      push();
+      translate(width - vW - margin, height - vH - margin);
+      stroke(255);
+      strokeWeight(2);
+      fill(0, 180);
+      rect(-5, -5, vW+10, vH+10, 12);
+      image(video, 0, 0, vW, vH);
+      pop();
+
+      // Text informatiu a dalt amb emoticona
+      fill(30, 180);
+      noStroke();
+      textAlign(CENTER, TOP);
+      textSize(28);
+      let label = emotionsCA[currentExpression.dominant] || "neutral";
+      let emoji = emotionsEmoji[currentExpression.dominant] || "😐";
+      text(
+        `${emoji} Sentiment: ${label} (${(smoothIntensity*100).toFixed(0)}%)`,
+        width/2, 20
+      );
+    }
+
+    // Figures irregulars per a cada sentiment
+    function figuraFelic(intensity) {
+      // Sol radiant amb raigs irregulars
+      
+      
+      /*CENTRAR La teva imatge 
+      
+      push();
+translate(width/2 - 300, height/2 - 400); // 300 i 400 són la meitat de 600x800
+beginShape();
+vertex(...);
+// més vertex(...)
+endShape();
+pop();
+break; // <-- Només necessari dins d'un switch/case AQUI NO
+
+      
+      */
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      let n = 14;
+      let rBase = map(intensity, 0, 1, min(width, height)*0.22, min(width, height)*0.36);
+      fill(255, 220, 60, 120 + 120*intensity);
+      stroke(255, 180, 0, 180);
+      strokeWeight(2 + 6*intensity);
+      beginShape();
+      for (let i = 0; i < n; i++) {
+        let angle = map(i, 0, n, 0, TWO_PI);
+        let r = rBase + sin(angle*3 + frameCount*0.03) * 30 * intensity + random(-10, 10)*intensity;
+        let x = cos(angle) * r;
+        let y = sin(angle) * r;
+        vertex(x, y);
+      }
+      endShape(CLOSE);
+    }
+
+    function figuraTrist(intensity) {
+      // Gota d'aigua irregular
+      let n = 10;
+      let rBase = map(intensity, 0, 1, min(width, height)*0.18, min(width, height)*0.28);
+      fill(70, 130, 180, 100 + 120*intensity);
+      stroke(30, 60, 160, 160);
+      strokeWeight(1 + 5*intensity);
+      beginShape();
+      for (let i = 0; i < n; i++) {
+        let angle = map(i, 0, n, PI/5, TWO_PI + PI/5);
+        let r = rBase + (i==0? 80*intensity : 0) + cos(angle*2 + frameCount*0.01)*15*intensity;
+        let x = sin(angle) * r;
+        let y = -cos(angle) * r * map(i,0,n,1,0.7);
+        vertex(x, y);
+      }
+      endShape(CLOSE);
+    }
+
+    function figuraEnfadat(intensity) {
+      // Estrella punxeguda i irregular
+      let n = 8;
+      let rBase = map(intensity, 0, 1, min(width, height)*0.19, min(width, height)*0.33);
+      fill(220, 30, 60, 100 + 120*intensity);
+      stroke(120, 0, 0, 180);
+      strokeWeight(2 + 7*intensity);
+      beginShape();
+      for (let i = 0; i < n; i++) {
+        let angle = map(i, 0, n, 0, TWO_PI);
+        let r = rBase + (i%2==0? 60*intensity : 0) + sin(angle*4 + frameCount*0.12)*25*intensity;
+        let x = cos(angle) * r;
+        let y = sin(angle) * r;
+        vertex(x, y);
+      }
+      endShape(CLOSE);
+    }
+
+    function figuraFastiguejat(intensity) {
+      // Figura amorfa verda
+      let n = 12;
+      let rBase = map(intensity, 0, 1, min(width, height)*0.17, min(width, height)*0.29);
+      fill(34, 139, 34, 90 + 140*intensity);
+      stroke(0, 80, 0, 160);
+      strokeWeight(2 + 4*intensity);
+      beginShape();
+      for (let i = 0; i < n; i++) {
+        let angle = map(i, 0, n, 0, TWO_PI);
+        let r = rBase + noise(i*0.5, frameCount*0.01) * 60 * intensity;
+        let x = cos(angle) * r;
+        let y = sin(angle) * r;
+        vertex(x, y);
+      }
+      endShape(CLOSE);
+    }
+
+    function figuraSorprès(intensity) {
+      // Polígon circular amb "ones" de sorpresa
+      let n = 16;
+      let rBase = map(intensity, 0, 1, min(width, height)*0.20, min(width, height)*0.34);
+      fill(186, 85, 211, 110 + 120*intensity);
+      stroke(100, 30, 180, 170);
+      strokeWeight(2 + 5*intensity);
+      beginShape();
+      for (let i = 0; i < n; i++) {
+        let angle = map(i, 0, n, 0, TWO_PI);
+        let r = rBase + sin(angle*8 + frameCount*0.08) * 40 * intensity;
+        let x = cos(angle) * r;
+        let y = sin(angle) * r;
+        vertex(x, y);
+      }
+      endShape(CLOSE);
+    }
+
+    function figuraEspantat(intensity) {
+      // Figura caòtica per a la por
+      let n = 18;
+      let rBase = map(intensity, 0, 1, min(width, height)*0.18, min(width, height)*0.32);
+      fill(100, 200, 255, 90 + 120*intensity);
+      stroke(30, 80, 200, 170);
+      strokeWeight(2 + 5*intensity);
+      beginShape();
+      for (let i = 0; i < n; i++) {
+        let angle = map(i, 0, n, 0, TWO_PI);
+        let r = rBase + sin(angle*9 + frameCount*0.13) * 45 * intensity + random(-15, 15)*intensity;
+        let x = cos(angle) * r;
+        let y = sin(angle) * r;
+        vertex(x, y);
+      }
+      endShape(CLOSE);
+    }
+
+    function figuraNeutral(intensity) {
+      // Hexàgon suau i lleugerament irregular
+      let n = 6;
+      let rBase = map(intensity, 0, 1, min(width, height)*0.21, min(width, height)*0.27);
+      fill(180, 180, 180, 80 + 120*intensity);
+      stroke(80, 80, 80, 120);
+      strokeWeight(1 + 3*intensity);
+      beginShape();
+      for (let i = 0; i < n; i++) {
+        let angle = map(i, 0, n, 0, TWO_PI);
+        let r = rBase + sin(angle*2 + frameCount*0.02) * 10 * intensity;
+        let x = cos(angle) * r;
+        let y = sin(angle) * r;
+        vertex(x, y);
+      }
+      endShape(CLOSE);
+    }
+  </script>
+</body>
+</html>
