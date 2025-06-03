@@ -207,3 +207,60 @@ font-family: 'Outfit', sans-serif;
 va ser buscar una cançó i vaig decantar-me per la melodia de un videojoc anomenat "Mario Bros". Tot seguit vaig primer fer el codi i vaig construir 
 la placa en Tinkercad per veure si funcionava.</p>
         
+<h3>Codi en Tinkercad i disseny de la placa:</h3>
+
+   <img src = "tinkercad.png">
+<pre><code>
+  #define SPEAKER_PIN A4  // Cambia esto al pin que estés usando
+
+#define NOTE_E3  165
+#define NOTE_G3  196
+#define NOTE_A3  220
+#define NOTE_AS3 233
+#define NOTE_B3  247
+
+#define NOTE_C4  262
+#define NOTE_D4  294
+#define NOTE_E4  330
+#define NOTE_F4  349
+#define NOTE_G4  392
+#define NOTE_A4  440
+#define NOTE_B4  494
+#define NOTE_C5  523
+
+int melody[] = {
+  NOTE_E4, NOTE_E4, NOTE_E4,
+  NOTE_C4, NOTE_E4, NOTE_G4,
+  NOTE_G3, NOTE_C4, NOTE_G3,
+  NOTE_E3, NOTE_A3, NOTE_B3, NOTE_AS3, NOTE_A3,
+  NOTE_G3, NOTE_E4, NOTE_G4,
+  NOTE_A4, NOTE_F4, NOTE_G4,
+  0, NOTE_E4, NOTE_C4, NOTE_D4, NOTE_B3
+};
+
+int durations[] = {
+  125, 125, 250,
+  250, 250, 250,
+  500, 250, 500,
+  500, 250, 250, 250, 250,
+  500, 125, 125,
+  250, 250, 250,
+  250, 250, 250, 250, 500
+};
+
+void setup() {
+  for (int i = 0; i < sizeof(melody) / sizeof(int); i++) {
+    int noteDuration = durations[i];
+    if (melody[i] != 0) {
+      tone(SPEAKER_PIN, melody[i], noteDuration);
+    }
+    delay(noteDuration * 1.3);
+    noTone(SPEAKER_PIN);
+  }
+}
+
+void loop() {
+}
+
+</code></pre>
+
