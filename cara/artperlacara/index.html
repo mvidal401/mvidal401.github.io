@@ -103,7 +103,7 @@
 
     function draw() {
       background(240);
-translate(0,300);
+
       // Transició suau de la intensitat
       smoothIntensity = lerp(smoothIntensity, currentExpression.intensity, 0.1);
 
@@ -189,6 +189,8 @@ translate(0,300);
         `${emoji} Sentiment: ${label} (${(smoothIntensity*100).toFixed(0)}%)`,
         width/2, 20
       );
+      translate(0,150);
+
     }
 
     // Figures irregulars per a cada sentiment
