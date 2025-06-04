@@ -101,7 +101,8 @@
       });
     }
 
-    function draw() {
+    function draw() { 
+      translate(0,300);
       background(240);
 
       // Transició suau de la intensitat
@@ -202,7 +203,6 @@
    b2 = map(intensity, 1, 0, 255, 0);
    s = map(intensity, 0.5,1, 0, 7)
 
-    translate(0,-150);
 
   background(r2, g2, b2);
 
