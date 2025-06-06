@@ -266,7 +266,7 @@ void loop() {
 </code></pre>
 <h3>Errors Tinkercad</h3>
 <p>Al estar dissenyant el circuit a Tinkercad vaig tenir un problema on al executar el codi la placa sortia que explotava</p>
-<img src = "tinkercadkaboom.png">
+<img src = "tinkercadkaboom.png" width = "650">
 <p>El problema que hi havia era que la resistència estava mal colocada i ho vaig poder solucionar canviant la resistència de lloc, com està a 
 la primera foto.</p>
 
@@ -276,3 +276,102 @@ la primera foto.</p>
    Però aquí comencen els problemes.</p>
 
 <h3>Errors Arduino IDE</h3>
+   <h4>1. No em detectava la placa</h4>
+   <p>Al voler pujar el codi per poder fer que funcioni la placa no era reconeguda. Aquest ha sigut l'error més fàcil de solucionar,
+   ja que simplement era anar provant plaques fins que funcionés</p>
+   <h4>2. exit status, l'error més díficil</h4>
+   <p>Al voler verificar el codi per després pujar-lo (upload), sortia un error on hi apareixia aquest missatge:
+avr[0m   1.8.6   [90m/home/tcad/.arduino15/packages/arduino/hardware/avr/1.8.6[0m
+ exit status 1.
+
+Jo no entenia el que significava aquest error, i vaig haver de consultar tant al professor com a Internet. Ell em va dir que intentés
+   trobar la solució per internet. Vaig utilitzar tant Google, on vaig trobar un foro on parlaven d'aquest error, i ChatGPT. I els
+   dos em donaven la mateixa solució, instal·lar una versió antiga del programa, concretament la versió 1.8.19 d'Arduino IDE.
+   Al fer-ho, no em va funcionar tampoc o sigui que vaig abandonar aquesta alternativa. Vaig comentar al professor que no havia trobat cap
+   solució i em va fer provar una altra cosa, Platformio.</p>
+
+   <h3>Platformio</h3>
+   <p>Platformio és una extensió de Visual Studio Code que també serveix per programar Arduino. L'has d'instal·lar des del menú 
+   Extensions. Al tenir-la descarregada, l'obrim. Ens apareixerà un arxiu anomenat "platformio.ini". Aquí he colocat aquest codi:</p>
+   <pre><code>[env:esp32-s3]
+platform = espressif32
+board = esp32-s3-devkitc-1
+framework = arduino
+monitor_speed = 115200
+upload_speed = 921600
+build_flags = 
+  -DARDUINO_USB_CDC_ON_BOOT=1
+  -DARDUINO_USB_MODE=1
+</code></pre>
+<p>Després he creat un arxiu anomenat "main.cpp" on he col·locat el codi que tenia al Arduino IDE però una mica modificat:</p>
+   <pre><code>#include <Arduino.h>
+
+#define BUZZER_PIN 2  /
+#define CHANNEL 0
+
+#define NOTE_B3  247
+#define NOTE_C4  262
+#define NOTE_D4  294
+#define NOTE_E4  330
+#define NOTE_F4  349
+#define NOTE_G4  392
+#define NOTE_A4  440
+#define NOTE_B4  494
+#define NOTE_C5  523
+#define NOTE_D5  587
+#define NOTE_E5  659
+#define NOTE_F5  698
+#define NOTE_G5  784
+#define NOTE_A5  880
+
+void playNote(int note, int duration) {
+  if (note == 0) {
+    ledcWriteTone(CHANNEL, 0);  
+  } else {
+    ledcWriteTone(CHANNEL, note);
+  }
+  delay(duration);
+  ledcWriteTone(CHANNEL, 0);
+  delay(50);
+}
+
+void setup() {
+  ledcSetup(CHANNEL, 5000, 8);
+  ledcAttachPin(BUZZER_PIN, CHANNEL);
+
+  playNote(NOTE_G4, 250);
+  playNote(NOTE_E4, 250);
+  playNote(NOTE_F4, 250);
+  playNote(NOTE_G4, 250);
+  playNote(NOTE_G4, 250);
+  playNote(NOTE_G4, 250);
+  playNote(NOTE_E4, 250);
+  playNote(NOTE_G4, 250);
+  playNote(NOTE_B4, 500);
+
+  playNote(NOTE_B3, 250);
+  playNote(NOTE_D4, 250);
+  playNote(NOTE_E4, 250);
+  playNote(NOTE_E4, 250);
+  playNote(NOTE_E4, 250);
+  playNote(NOTE_G4, 250);
+  playNote(NOTE_E4, 250);
+  playNote(NOTE_E4, 250);
+  playNote(NOTE_D4, 500);
+}
+
+void loop() {
+}
+</code></pre>
+
+<h3>La meva idea</h3>
+   <p>El que tenia jo en ment de voler crear després de qu em funcionés aquest codi de música era crear un semàfor amb un sensor de moviment
+   que detectés si algú passa quan el semàfor està vermell i soni. Encara que no he pogut realitzar-ho perquè no em funciona res.</p>
+<h3>Resultats i conclusions</h3>
+   <p>Finalment no he aconseguit fer que funcioni el que havia construit, perquè al fer upload funciona però no sona la música, llavors no
+   he sapigut arreglar això. En conclusió, jo i més companys hem tingut molts errors amb aquests plaques llavors no sé si ja es casualitat
+   o és que aquestes plaques tenen masses problemes. A part, quan vam fer un altre projecte amb la mateixa placa al primer trimestre
+   tampoc em funcionava la placa, o sigui que aquesta ja era la segona vegada que em passa. Aquí està la foto del meu treball final:</p>
+   <img src = "fotoarduino.png" width = "650">
+
+   
