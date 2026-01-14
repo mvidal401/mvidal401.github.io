@@ -100,12 +100,12 @@ dibuixar el diagrama de portes lògiques.
     {
         type: "questions", // Tipus de pregunta
         category: "energia",
-        text: `Un rentaplats ha consumit \\(0{,}9 \\, \\text{kWh}\\) d’energia elèctrica per a escalfar \\(11 \\, \\text{L}\\) d’aigua des d’una temperatura ambient \\(T_{amb} = 10 \\, ^\\circ \\text{C}\\) a una temperatura \\(T = 70 \\, ^\\circ \\text{C}\\). La calor específica de l’aigua és \\(c_e = 4{,}18 \\, \\frac{\\text{J}}{\\text{g} \\cdot ^\\circ \\text{C}}\\). El rendiment del rentaplats és:`,
+        text: `En una fàbrica de peces metàŀliques, produeixen cargols amb un diàmetre nominal de 10 mm i una tolerància de ±0,05 mm. Quin és el diàmetre mínim acceptable per a aquests cargols?`,
         options: [
-            { text: "11,74 %", value: "a" },
-            { text: "27,59 %", value: "b" },
-            { text: "76,63 %", value: "c" },
-            { text: "85,15 %", value: "d" }
+            { text: "9,90 mm", value: "a" },
+            { text: "9,95 mm", value: "b" },
+            { text: "10,05 mm", value: "c" },
+            { text: "10,10 mm", value: "d" }
         ],
         correctAnswer: "d",
         steps: `
