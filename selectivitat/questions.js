@@ -138,7 +138,8 @@ dibuixar el diagrama de portes lògiques.
         images: `<img src="ruta/a/imatgePregunta.jpg" alt="Imatge relacionada amb la pregunta">`  // Imatge opcional al final de la pregunta
     },
  
-     {
+    
+       {
         type: "questions", // Tipus de pregunta
         category: "motors",
         text: `Un motor de propà líquid consumeix 7,5 kg/h quan funciona a 2 500 min–1. Si el motor és de quatre temps, quina massa de propà es consumeix en 100 cicles termodinàmics del motor?`,
@@ -147,45 +148,6 @@ dibuixar el diagrama de portes lògiques.
             { text: "10 g", value: "b" },
             { text: "100 g", value: "c" },
             { text: "200 g", value: "d" }
-        ],
-        correctAnswer: "d",
-        steps: `
-            \\[
-            m = 11 \\, \\text{L} \\times 1000 \\, \\text{g/L} = 11000 \\, \\text{g}
-            \\]
-            \\[
-            \\Delta T = 70 \\, ^\\circ \\text{C} - 10 \\, ^\\circ \\text{C} = 60 \\, ^\\circ \\text{C}
-            \\]
-            \\[
-            Q = m \\times c_e \\times \\Delta T
-            \\]
-            \\[
-            Q = 11000 \\, \\text{g} \\times 4{,}18 \\, \\frac{\\text{J}}{\\text{g} \\cdot ^\\circ \\text{C}} \\times 60 \\, ^\\circ \\text{C}
-            \\]
-            \\[
-            Q = 11000 \\times 4{,}18 \\times 60 = 2{,}7588 \\times 10^6 \\, \\text{J}
-            \\]
-            \\[
-            W = 0{,}9 \\, \\text{kWh} \\times 3600000 \\, \\text{J/kWh} = 3240000 \\, \\text{J}
-            \\]
-            \\[
-            \\eta = \\frac{Q}{W} \\times 100
-            \\]
-            \\[
-            \\eta = \\frac{2{,}7588 \\times 10^6}{3{,}24 \\times 10^6} \\times 100 = 85{,}15 \\, \\%
-            \\]
-            <br><br>
-        
-    },
-      {
-        type: "questions", // Tipus de pregunta
-        category: "motors",
-        text: `Es proposen dues opcions de funicular per a anar entre dos punts d’una muntanya a velocitat constant. L’opció A és el recorregut més curt possible, però amb el pendent més acusat. L’opció B recorre més distància per tal de rebaixar el pendent de la via. En totes dues opcions, els funiculars van a la mateixa velocitat i transporten la mateixa quantitat de persones. Es pot afirmar que l’energia total necessària per a completar el recorregut, sense considerar les pèrdues energètiques,`,
-        options: [
-            { text: "és la mateixa.", value: "a" },
-            { text: "és més gran en l’opció A.", value: "b" },
-            { text: "és més gran en l’opció B.", value: "c" },
-            { text: "depèn de l’acceleració màxima del funicular.", value: "d" }
         ],
         correctAnswer: "d",
         steps: `
