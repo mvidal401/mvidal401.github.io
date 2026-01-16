@@ -2,7 +2,7 @@ const questions = [
    
     {
         type: "questions", // Tipus de pregunta
-        category: "energia",
+        category: "metrologia",
         text: `En una fàbrica de peces metàŀliques, produeixen cargols amb un diàmetre nominal de 10 mm i una tolerància de ±0,05 mm. Quin és el diàmetre mínim acceptable per a aquests cargols?`,
         options: [
             { text: "9,90 mm", value: "a" },
@@ -43,7 +43,7 @@ const questions = [
     
   {
         type: "questions", // Tipus de pregunta
-        category: "energia",
+        category: "motors",
         text: `Un motor de propà líquid consumeix 7,5 kg/h quan funciona a 2 500 min–1. Si el motor és de quatre temps, quina massa de propà es consumeix en 100 cicles termodinàmics del motor?`,
         options: [
             { text: "20 g", value: "a" },
@@ -120,12 +120,12 @@ const questions = [
             \\]
             <br><br>
             <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
-        images: `<img src="ruta/a/imatgePregunta.jpg" alt="Imatge relacionada amb la pregunta">`  // Imatge opcional al final de la pregunta
+        images: `<img src="<img src="https://mvidal401.github.io/selectivitat/images/Captura de pantalla 2026-01-16 172542.png" alt="Imatge relacionada amb la pregunta" width="900">`  // Imatge opcional al final de la pregunta
     },
 
      {
         type: "questions", // Tipus de pregunta
-        category: "energia",
+        category: "electrics",
         text: `Alimentem una resistència de valor R = 17 Ω amb una font de tensió alterna sinusoidal de valor eficaç U = 230 V i de freqüència f = 50 Hz. Quin és el valor màxim de corrent que hi circula?`,
         options: [
             { text: "13,52 A", value: "a" },
@@ -166,7 +166,7 @@ const questions = [
 
        {
         type: "questions", // Tipus de pregunta
-        category: "energia",
+        category: "materials",
         text: `En un assaig de tracció s’obtenen les corbes tensió-deformació que mostra la figura. Quin dels dos acers té un límit elàstic més alt?`,
         options: [
             { text: "L’acer A.", value: "a" },
@@ -247,7 +247,7 @@ const questions = [
     
    {
         type: "questions", // Tipus de pregunta
-        category: "energia",
+        category: "metrologia",
         text: ``,
         options: [
             { text: "50 μm", value: "a" },
@@ -288,7 +288,7 @@ const questions = [
 
      {
         type: "questions", // Tipus de pregunta
-        category: "energia",
+        category: "electrics",
         text: `Una càrrega elèctrica està formada per una resistència de valor R i una inductància de valor L = 100 mH connectades en sèrie. Quan la càrrega està connectada a una font de tensió alterna sinusoidal de valor U = 230 V de freqüència f = 50 Hz, es mesura que hi circula un corrent de valor I = 2 A. Quin és el valor de la resistència R?`,
         options: [
             { text: "84 Ω", value: "a" },
@@ -329,7 +329,7 @@ const questions = [
  
        {
         type: "questions", // Tipus de pregunta
-        category: "energia",
+        category: "materials",
         text: `S’utilitzen dues provetes, geomètricament idèntiques, una d’acer i una altra de bronze, per a realitzar assajos de tracció. S’obtenen les corbes tensió-deformació que mostra la figura. Quin dels dos materials presentarà una deformació plàstica més gran quan s’hagi trencat?`,
         options: [
             { text: "L’acer.", value: "a" },
@@ -370,7 +370,7 @@ const questions = [
 
          {
         type: "questions", // Tipus de pregunta
-        category: "energia",
+        category: "control",
         text: `Un sistema de seguretat requereix que un llum s’encengui únicament quan dos interruptors estan en estat obert. S’utilitzen les variables d’estat següents: La funció lògica entre les variables d’estat és:`,
         options: [
             { text: "l = p + q", value: "a" },
@@ -453,7 +453,7 @@ const questions = [
 
           {
         type: "questions", // Tipus de pregunta
-        category: "energia",
+        category: "electrics",
         text: `Disposem de dues resistències de valors R1 = 15 Ω i R2 = 25 Ω. Aquestes resistències es connecten en paraŀlel a una font de tensió contínua U. El corrent que circula per la resistènciaR1 és I1 = 2 A. En aquestes condicions, quina és la potència subministrada per la font U a lesdues resistències?`,
         options: [
             { text: "30 W", value: "a" },
@@ -494,7 +494,7 @@ const questions = [
 
        {
         type: "questions", // Tipus de pregunta
-        category: "energia",
+        category: "metrologia",
         text: `En un taller mecànic, s’utilitza un micròmetre per a mesurar el diàmetre d’un eix. L’instrument té una resolució de 0,01 mm i la mesura obtinguda és de 15,23 mm amb una incertesa de ±0,02 mm. Quin és el rang possible del diàmetre real de l’eix?`,
         options: [
             { text: "Entre 15,21 mm i 15,25 mm.", value: "a" },
@@ -535,7 +535,7 @@ const questions = [
 
        {
         type: "questions", // Tipus de pregunta
-        category: "energia",
+        category: "control",
         text: `Un circuit presenta l’esquema de portes lògiques següent. Quina és la funció lògica que el representa?`,
         options: [
             { text: "", value: "a" },
@@ -617,7 +617,7 @@ const questions = [
 
        {
         type: "questions", // Tipus de pregunta
-        category: "energia",
+        category: "electrics",
         text: `Un motor de corrent continu té una placa de característiques on s’indiquen les dades
 següents:
 UN = 24 V / IN = 3,47 A / PN = 60 W / nN = 8 500 min–1
@@ -702,7 +702,7 @@ El valor de la resistència de l’induït és Ra = 80 mΩ. Quina potència es d
 
        {
         type: "questions", // Tipus de pregunta
-        category: "energia",
+        category: "materials",
         text: `En un assaig de tracció s’obtenen les corbes tensió-deformació que mostra la figura. Quin dels dos acers és més dúctil?`,
         options: [
             { text: "L’acer A.", value: "a" },
@@ -743,7 +743,7 @@ El valor de la resistència de l’induït és Ra = 80 mΩ. Quina potència es d
 
    {
         type: "questions", // Tipus de pregunta
-        category: "energia",
+        category: "metrologia",
         text: `En un laboratori químic s’utilitza un termòmetre digital amb una resolució de 0,1 °C i una precisió de ±0,3 °C. Si la temperatura mesurada és de 25,4 °C, quin és el rang de temperatures en què es troba el valor real?`,
         options: [
             { text: "Entre 25,1 °C i 25,7 °C.", value: "a" },
@@ -784,7 +784,7 @@ El valor de la resistència de l’induït és Ra = 80 mΩ. Quina potència es d
 
        {
         type: "questions", // Tipus de pregunta
-        category: "energia",
+        category: "electrics",
         text: `En un circuit elèctric, es connecten en paraŀlel dues resistències de 120 Ω i 240 Ω, totes dues amb una tolerància del ±2 %. Quin és el valor mínim possible de la resistència equivalent del circuit?`,
         options: [
             { text: "12,75 Ω", value: "a" },
@@ -825,7 +825,7 @@ El valor de la resistència de l’induït és Ra = 80 mΩ. Quina potència es d
 
        {
         type: "questions", // Tipus de pregunta
-        category: "energia",
+        category: "metrologia",
         text: ``,
         options: [
             { text: "7 μm", value: "a" },
@@ -866,7 +866,7 @@ El valor de la resistència de l’induït és Ra = 80 mΩ. Quina potència es d
 
        {
         type: "questions", // Tipus de pregunta
-        category: "energia",
+        category: "electrics",
         text: `Un motor de corrent continu té una placa de característiques on s’indiquen les dades
 següents:
 UN = 24 V / IN = 3,47 A / PN = 60 W / nN = 8 500 min-1
@@ -951,7 +951,7 @@ Quin és el parell nominal?`,
 
        {
         type: "questions", // Tipus de pregunta
-        category: "energia",
+        category: "electrics",
         text: `La impedància equivalent d’una instaŀlació monofàsica alimentada amb la tensió U = 230 V és Z = 3,4 + j 1,2 Ω. Quin és el valor de la potència aparent S?`,
         options: [
             { text: "S = –4,891 kVA", value: "a" },
@@ -990,9 +990,9 @@ Quin és el parell nominal?`,
         images: `<img src="ruta/a/imatgePregunta.jpg" alt="Imatge relacionada amb la pregunta">`  // Imatge opcional al final de la pregunta
     },
 
-     {
+   {
         type: "exercicis",
-        category: "control",
+        category: "motors",
         text: `La figura mostra un esquema d’un elevador de taller de dues columnes. Les dues columnes són iguals, i dins de cadascuna d’elles hi ha una transmissió cargol-femella. La femella
 és solidària als braços que sostenen el vehicle. A la part superior de la columna se situa un
 motor que per mitjà d’un reductor d’engranatges fa girar el cargol situat a l’interior de la
@@ -1004,6 +1004,590 @@ cotxe s’eleva 7 mm per cada volta del cargol), i el conjunt del sistema té un
 Volem determinar la potència elèctrica d’un motor i dissenyar el reductor perquè quan el
 motor giri a n = 1 420 min–1 el temps d’elevació per a arribar a l’alçada màxima sigui t = 45 s.
 Per a això, determineu:
+               <br><strong>a)</strong> La potència mecànica necessària per a elevar el cotxe, Pmec. [0,5 punts]
+               <br><strong>b)</strong> La potència elèctrica que consumirà cada motor, Pelèc. [0,5 punts]
+               <br><strong>c)</strong> Les voltes que ha de fer el cargol perquè el cotxe arribi a l’alçada màxima, nvoltes. [0,5 punts]
+               <br><strong>d)</strong> Els ingressos que tindrà el parc eòlic si el preu de venda de l’energia eòlica és \\(p_{\\text{venda}} = 7{,}624\\) cèntims d’euro per \\(\\text{kWh}\\). [0,5 punts]
+               <br><strong>e)</strong> La relació de transmissió que cal que tingui el reductor, i = nmot/ncarg.
+               <br><br>
+               <img src="ruta/a/imatgePregunta.jpg" alt="Imatge relacionada amb la pregunta">`,  // Imatge opcional al final de la pregunta
+        correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
+        steps: `
+            <strong>a) Càlcul de la potència mitjana del vent \\(P_{\\text{vent}}\\) per a un aerogenerador:</strong>
+            <br>
+            - Àrea d’escombratge de les pales:
+            \\[
+            A = \\frac{\\pi d^2}{4} = \\frac{\\pi \\times (77 \\, \\text{m})^2}{4} = 4657{,}7 \\, \\text{m}^2
+            \\]
+            - Densitat de l’aire:
+            \\[
+            \\rho = \\frac{1{,}225 \\, \\text{g}}{\\text{m}^3} = 1{,}225 \\, \\frac{\\text{kg}}{\\text{m}^3}
+            \\]
+            - Velocitat del vent (en \\(\\text{m/s}\\)):
+            \\[
+            v = \\frac{25 \\, \\text{km/h}}{3{,}6} = 6{,}94 \\, \\text{m/s}
+            \\]
+            - Potència del vent:
+            \\[
+            P_{\\text{vent}} = \\frac{1}{2} \\times 1{,}225 \\, \\frac{\\text{kg}}{\\text{m}^3} \\times 4657{,}7 \\, \\text{m}^2 \\times (6{,}94 \\, \\text{m/s})^3 = 828{,}08 \\, \\text{kW}
+            \\]
+            <br>
+            <strong>b) Potència elèctrica útil \\(P_{\\text{útil}}\\) generada per cada aerogenerador:</strong>
+            <br>
+            - Aplicant el rendiment de l’aerogenerador:
+            \\[
+            P_{\\text{útil}} = P_{\\text{vent}} \\times \\eta_{\\text{aerog}} \\times c_a = 828{,}08 \\, \\text{kW} \\times 0{,}68 \\times 0{,}42 = 236{,}62 \\, \\text{kW}
+            \\]
+            <br>
+            <strong>c) Energia elèctrica total \\(E_{\\text{total}}\\) generada al parc durant un any:</strong>
+            <br>
+            - Nombre total d'hores operatives a l'any:
+            \\[
+            h = 300 \\, \\text{dies/any} \\times 18 \\, \\text{h/dia} = 5400 \\, \\text{h/any}
+            \\]
+            - Energia generada per un aerogenerador:
+            \\[
+            E_{\\text{útil}} = P_{\\text{útil}} \\times h = 236{,}62 \\, \\text{kW} \\times 5400 \\, \\text{h} = 1277{,}75 \\, \\text{MWh/any}
+            \\]
+            - Energia total generada per 50 aerogeneradors:
+            \\[
+            E_{\\text{total}} = 1277{,}75 \\, \\text{MWh/any} \\times 50 = 63{,}89 \\, \\text{GWh/any}
+            \\]
+            <br>
+            <strong>d) Ingressos del parc eòlic:</strong>
+            <br>
+            - Ingressos totals:
+            \\[
+            Ingressos = E_{\\text{total}} \\times p_{\\text{venda}} = 63{,}89 \\, \\text{GWh/any} \\times 7{,}624 \\, \\text{cèntims/kWh} = 4865{,}9 \\, \\text{k€}
+            \\]
+            <br>
+            <strong>e) Impacte d'una reducció del 10 % en la velocitat del vent:</strong>
+            <br>
+            - Nova velocitat del vent:
+            \\[
+            v_{nou} = 0{,}9 \\times v = 0{,}9 \\times 6{,}94 \\, \\text{m/s} = 6{,}25 \\, \\text{m/s}
+            \\]
+            - Nova potència del vent:
+            \\[
+            P_{\\text{vent, nou}} = \\frac{1}{2} \\times 1{,}225 \\, \\frac{\\text{kg}}{\\text{m}^3} \\times 4657{,}7 \\, \\text{m}^2 \\times (6{,}25 \\, \\text{m/s})^3 = 654{,}8 \\, \\text{kW}
+            \\]
+            - Nova potència útil:
+            \\[
+            P_{\\text{útil, nou}} = 654{,}8 \\, \\text{kW} \\times 0{,}68 \\times 0{,}42 = 187{,}19 \\, \\text{kW}
+            \\]
+            - Nova energia total:
+            \\[
+            E_{\\text{total, nou}} = 187{,}19 \\, \\text{kW} \\times 5400 \\, \\text{h} \\times 50 = 50{,}7 \\, \\text{GWh/any}
+            \\]
+            - Nous ingressos:
+            \\[
+            Ingressos_{nou} = 50{,}7 \\, \\text{GWh/any} \\times 7{,}624 \\, \\text{cèntims/kWh} = 3865{,}58 \\, \\text{k€}
+            \\]
+            - Percentatge de disminució:
+            \\[
+            \\frac{4865{,}9 - 3865{,}58}{4865{,}9} \\times 100 \\approx 20{,}6\\%
+            \\]
+            <br><br>
+            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
+    },
+
+   {
+        type: "exercicis",
+        category: "energia",
+        text: `Una cuina portàtil per a càmping funciona amb cartutxos de mcartutx = 230 g de gas butà.
+El cremador té un rendiment η = 0,2 i el seu consum màxim és c = 155 g/h de butà, de poder
+calorífic pc = 45,8 MJ/kg. Volem estudiar quina quantitat de gas es consumeix per cuinar arròs
+per a 5 persones si s’utilitzen V = 2 L d’aigua que inicialment es troben a T1 = 15 °C. Sabent
+que la calor específica de l’aigua és ce = 4,186 kJ/(kg °C), determineu:
+
+               <br><strong>a)</strong> La quantitat de gas necessària perquè l’aigua comenci a bullir, mgas1. [1 punt]
+               <br><strong>b)</strong> El temps necessari per a arribar a l’ebullició, t1, si el cremador funciona al màxim de consum. [0,5 punts]
+               <br><strong>c)</strong> Un cop l’aigua ha arribat a ebullició, s’afegeix l’arròs i es deixa coure durant t2 = 18 minuts
+reduint el cabal de gas a un 30 % del seu consum màxim. Determineu el percentatge de gas consumit del cartutx durant tot el procés (bullir l’aigua i cuinar l’arròs), Δ. [0,5 punts]
+               
+               <br><br>
+               <img src="ruta/a/imatgePregunta.jpg" alt="Imatge relacionada amb la pregunta">`,  // Imatge opcional al final de la pregunta
+        correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
+        steps: `
+            <strong>a) Càlcul de la potència mitjana del vent \\(P_{\\text{vent}}\\) per a un aerogenerador:</strong>
+            <br>
+            - Àrea d’escombratge de les pales:
+            \\[
+            A = \\frac{\\pi d^2}{4} = \\frac{\\pi \\times (77 \\, \\text{m})^2}{4} = 4657{,}7 \\, \\text{m}^2
+            \\]
+            - Densitat de l’aire:
+            \\[
+            \\rho = \\frac{1{,}225 \\, \\text{g}}{\\text{m}^3} = 1{,}225 \\, \\frac{\\text{kg}}{\\text{m}^3}
+            \\]
+            - Velocitat del vent (en \\(\\text{m/s}\\)):
+            \\[
+            v = \\frac{25 \\, \\text{km/h}}{3{,}6} = 6{,}94 \\, \\text{m/s}
+            \\]
+            - Potència del vent:
+            \\[
+            P_{\\text{vent}} = \\frac{1}{2} \\times 1{,}225 \\, \\frac{\\text{kg}}{\\text{m}^3} \\times 4657{,}7 \\, \\text{m}^2 \\times (6{,}94 \\, \\text{m/s})^3 = 828{,}08 \\, \\text{kW}
+            \\]
+            <br>
+            <strong>b) Potència elèctrica útil \\(P_{\\text{útil}}\\) generada per cada aerogenerador:</strong>
+            <br>
+            - Aplicant el rendiment de l’aerogenerador:
+            \\[
+            P_{\\text{útil}} = P_{\\text{vent}} \\times \\eta_{\\text{aerog}} \\times c_a = 828{,}08 \\, \\text{kW} \\times 0{,}68 \\times 0{,}42 = 236{,}62 \\, \\text{kW}
+            \\]
+            <br>
+            <strong>c) Energia elèctrica total \\(E_{\\text{total}}\\) generada al parc durant un any:</strong>
+            <br>
+            - Nombre total d'hores operatives a l'any:
+            \\[
+            h = 300 \\, \\text{dies/any} \\times 18 \\, \\text{h/dia} = 5400 \\, \\text{h/any}
+            \\]
+            - Energia generada per un aerogenerador:
+            \\[
+            E_{\\text{útil}} = P_{\\text{útil}} \\times h = 236{,}62 \\, \\text{kW} \\times 5400 \\, \\text{h} = 1277{,}75 \\, \\text{MWh/any}
+            \\]
+            - Energia total generada per 50 aerogeneradors:
+            \\[
+            E_{\\text{total}} = 1277{,}75 \\, \\text{MWh/any} \\times 50 = 63{,}89 \\, \\text{GWh/any}
+            \\]
+            <br>
+            <strong>d) Ingressos del parc eòlic:</strong>
+            <br>
+            - Ingressos totals:
+            \\[
+            Ingressos = E_{\\text{total}} \\times p_{\\text{venda}} = 63{,}89 \\, \\text{GWh/any} \\times 7{,}624 \\, \\text{cèntims/kWh} = 4865{,}9 \\, \\text{k€}
+            \\]
+            <br>
+            <strong>e) Impacte d'una reducció del 10 % en la velocitat del vent:</strong>
+            <br>
+            - Nova velocitat del vent:
+            \\[
+            v_{nou} = 0{,}9 \\times v = 0{,}9 \\times 6{,}94 \\, \\text{m/s} = 6{,}25 \\, \\text{m/s}
+            \\]
+            - Nova potència del vent:
+            \\[
+            P_{\\text{vent, nou}} = \\frac{1}{2} \\times 1{,}225 \\, \\frac{\\text{kg}}{\\text{m}^3} \\times 4657{,}7 \\, \\text{m}^2 \\times (6{,}25 \\, \\text{m/s})^3 = 654{,}8 \\, \\text{kW}
+            \\]
+            - Nova potència útil:
+            \\[
+            P_{\\text{útil, nou}} = 654{,}8 \\, \\text{kW} \\times 0{,}68 \\times 0{,}42 = 187{,}19 \\, \\text{kW}
+            \\]
+            - Nova energia total:
+            \\[
+            E_{\\text{total, nou}} = 187{,}19 \\, \\text{kW} \\times 5400 \\, \\text{h} \\times 50 = 50{,}7 \\, \\text{GWh/any}
+            \\]
+            - Nous ingressos:
+            \\[
+            Ingressos_{nou} = 50{,}7 \\, \\text{GWh/any} \\times 7{,}624 \\, \\text{cèntims/kWh} = 3865{,}58 \\, \\text{k€}
+            \\]
+            - Percentatge de disminució:
+            \\[
+            \\frac{4865{,}9 - 3865{,}58}{4865{,}9} \\times 100 \\approx 20{,}6\\%
+            \\]
+            <br><br>
+            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
+    }, 
+
+   {
+        type: "exercicis",
+        category: "motors",
+        text: `L’aeri de Montserrat és un telefèric que va ser inaugurat l’any 1930 i que actualment
+ofereix els seus serveis amb les instaŀlacions originals. S’estudia el moviment del trajecte de
+pujada amb passatgers des de l’estació de ferrocarrils fins al monestir per a una única cabina.
+Aquestes són les principals característiques tècniques del funicular:
+— Longitud, d: 1 357 m
+— Desnivell, h: 544 m
+— Velocitat mitjana, v: 5 m/s
+— Temps de viatge, tv: 5 min
+— Pendent màxim, i: 45 %
+— Pes de cada cabina buida, m: 2 175 kg
+— Pes de cada cabina a plena càrrega, M: 4 900 kg
+— Potència consumida pel motor, Pcons: 115 kW
+— Temps de funcionament, tf
+: 9 hores diàries amb una freqüència de pas de 15 minuts.
+— Preu de l’energia utilitzada, ce: 0,21 €/(kW h)
+Volem determinar el rendiment del telefèric i el cost del consum elèctric del mes de juny.
+Per a això, determineu:
+               <br><strong>a)</strong> El treball mecànic necessari per a pujar una cabina a plena càrrega, W. [0,5 punts]
+               <br><strong>b)</strong> La potència mitjana que ha de subministrar el motor per a fer aquest treball, Psubm. [0,5 punts]
+               <br><strong>c)</strong> El rendiment del telefèric, η. [0,5 punts]
+               <br><strong>d)</strong> El cost mensual de funcionament del mes de juny, cjuny. [1 punt]
+               <br><br>
+               <img src="ruta/a/imatgePregunta.jpg" alt="Imatge relacionada amb la pregunta">`,  // Imatge opcional al final de la pregunta
+        correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
+        steps: `
+            <strong>a) Càlcul de la potència mitjana del vent \\(P_{\\text{vent}}\\) per a un aerogenerador:</strong>
+            <br>
+            - Àrea d’escombratge de les pales:
+            \\[
+            A = \\frac{\\pi d^2}{4} = \\frac{\\pi \\times (77 \\, \\text{m})^2}{4} = 4657{,}7 \\, \\text{m}^2
+            \\]
+            - Densitat de l’aire:
+            \\[
+            \\rho = \\frac{1{,}225 \\, \\text{g}}{\\text{m}^3} = 1{,}225 \\, \\frac{\\text{kg}}{\\text{m}^3}
+            \\]
+            - Velocitat del vent (en \\(\\text{m/s}\\)):
+            \\[
+            v = \\frac{25 \\, \\text{km/h}}{3{,}6} = 6{,}94 \\, \\text{m/s}
+            \\]
+            - Potència del vent:
+            \\[
+            P_{\\text{vent}} = \\frac{1}{2} \\times 1{,}225 \\, \\frac{\\text{kg}}{\\text{m}^3} \\times 4657{,}7 \\, \\text{m}^2 \\times (6{,}94 \\, \\text{m/s})^3 = 828{,}08 \\, \\text{kW}
+            \\]
+            <br>
+            <strong>b) Potència elèctrica útil \\(P_{\\text{útil}}\\) generada per cada aerogenerador:</strong>
+            <br>
+            - Aplicant el rendiment de l’aerogenerador:
+            \\[
+            P_{\\text{útil}} = P_{\\text{vent}} \\times \\eta_{\\text{aerog}} \\times c_a = 828{,}08 \\, \\text{kW} \\times 0{,}68 \\times 0{,}42 = 236{,}62 \\, \\text{kW}
+            \\]
+            <br>
+            <strong>c) Energia elèctrica total \\(E_{\\text{total}}\\) generada al parc durant un any:</strong>
+            <br>
+            - Nombre total d'hores operatives a l'any:
+            \\[
+            h = 300 \\, \\text{dies/any} \\times 18 \\, \\text{h/dia} = 5400 \\, \\text{h/any}
+            \\]
+            - Energia generada per un aerogenerador:
+            \\[
+            E_{\\text{útil}} = P_{\\text{útil}} \\times h = 236{,}62 \\, \\text{kW} \\times 5400 \\, \\text{h} = 1277{,}75 \\, \\text{MWh/any}
+            \\]
+            - Energia total generada per 50 aerogeneradors:
+            \\[
+            E_{\\text{total}} = 1277{,}75 \\, \\text{MWh/any} \\times 50 = 63{,}89 \\, \\text{GWh/any}
+            \\]
+            <br>
+            <strong>d) Ingressos del parc eòlic:</strong>
+            <br>
+            - Ingressos totals:
+            \\[
+            Ingressos = E_{\\text{total}} \\times p_{\\text{venda}} = 63{,}89 \\, \\text{GWh/any} \\times 7{,}624 \\, \\text{cèntims/kWh} = 4865{,}9 \\, \\text{k€}
+            \\]
+            <br>
+            <strong>e) Impacte d'una reducció del 10 % en la velocitat del vent:</strong>
+            <br>
+            - Nova velocitat del vent:
+            \\[
+            v_{nou} = 0{,}9 \\times v = 0{,}9 \\times 6{,}94 \\, \\text{m/s} = 6{,}25 \\, \\text{m/s}
+            \\]
+            - Nova potència del vent:
+            \\[
+            P_{\\text{vent, nou}} = \\frac{1}{2} \\times 1{,}225 \\, \\frac{\\text{kg}}{\\text{m}^3} \\times 4657{,}7 \\, \\text{m}^2 \\times (6{,}25 \\, \\text{m/s})^3 = 654{,}8 \\, \\text{kW}
+            \\]
+            - Nova potència útil:
+            \\[
+            P_{\\text{útil, nou}} = 654{,}8 \\, \\text{kW} \\times 0{,}68 \\times 0{,}42 = 187{,}19 \\, \\text{kW}
+            \\]
+            - Nova energia total:
+            \\[
+            E_{\\text{total, nou}} = 187{,}19 \\, \\text{kW} \\times 5400 \\, \\text{h} \\times 50 = 50{,}7 \\, \\text{GWh/any}
+            \\]
+            - Nous ingressos:
+            \\[
+            Ingressos_{nou} = 50{,}7 \\, \\text{GWh/any} \\times 7{,}624 \\, \\text{cèntims/kWh} = 3865{,}58 \\, \\text{k€}
+            \\]
+            - Percentatge de disminució:
+            \\[
+            \\frac{4865{,}9 - 3865{,}58}{4865{,}9} \\times 100 \\approx 20{,}6\\%
+            \\]
+            <br><br>
+            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
+    },
+
+   {
+        type: "exercicis",
+        category: "maquines",
+        text: `La figura mostra una maqueta didàctica per a fer assajos. La guia homogènia de fusta
+OC, de longitud l = 1 m, està articulada a la paret i té una massa mfusta = 0,75 kg. El tensor AB,
+que forma un angle amb l’horitzontal φ = 30°, manté el sistema en equilibri. La distància OB
+és d = 0,3 m. El ganxo es pot desplaçar per la guia OBC i està preparat per a penjar-hi una
+ampolla de V = 2 L d’aigua. El tensor AB, que és un fil de cotó, té un diàmetre df
+ = 1,4 mm i
+una resistència a la tracció σ = 80 MPa. Es tracta de determinar a quina distància màxima de
+la paret es pot penjar l’ampolla d’aigua per tal que no es trenqui el cable de cotó. Per a fer-ho:
+               <br><strong>a)</strong> Dibuixeu el diagrama de sòlid lliure de la guia OC. [0,5 punts]
+               <br><strong>b)</strong> Trobeu l’expressió que descriu la força del fil, T, en funció de la geometria del sistema. [1 punt]
+               <br><strong>c)</strong> Determineu la força màxima que pot suportar el fil, Tmax. [0,5 punts]
+               <br><strong>d)</strong> Determineu quin és el valor màxim que pot prendre la coordenada x. [0,5 punts]
+               <br><strong>e)</strong> En quin percentatge disminuirien els ingressos anteriors si la velocitat mitjana del vent es reduís un 10 %.
+               <br><br>
+               <img src="ruta/a/imatgePregunta.jpg" alt="Imatge relacionada amb la pregunta">`,  // Imatge opcional al final de la pregunta
+        correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
+        steps: `
+            <strong>a) Càlcul de la potència mitjana del vent \\(P_{\\text{vent}}\\) per a un aerogenerador:</strong>
+            <br>
+            - Àrea d’escombratge de les pales:
+            \\[
+            A = \\frac{\\pi d^2}{4} = \\frac{\\pi \\times (77 \\, \\text{m})^2}{4} = 4657{,}7 \\, \\text{m}^2
+            \\]
+            - Densitat de l’aire:
+            \\[
+            \\rho = \\frac{1{,}225 \\, \\text{g}}{\\text{m}^3} = 1{,}225 \\, \\frac{\\text{kg}}{\\text{m}^3}
+            \\]
+            - Velocitat del vent (en \\(\\text{m/s}\\)):
+            \\[
+            v = \\frac{25 \\, \\text{km/h}}{3{,}6} = 6{,}94 \\, \\text{m/s}
+            \\]
+            - Potència del vent:
+            \\[
+            P_{\\text{vent}} = \\frac{1}{2} \\times 1{,}225 \\, \\frac{\\text{kg}}{\\text{m}^3} \\times 4657{,}7 \\, \\text{m}^2 \\times (6{,}94 \\, \\text{m/s})^3 = 828{,}08 \\, \\text{kW}
+            \\]
+            <br>
+            <strong>b) Potència elèctrica útil \\(P_{\\text{útil}}\\) generada per cada aerogenerador:</strong>
+            <br>
+            - Aplicant el rendiment de l’aerogenerador:
+            \\[
+            P_{\\text{útil}} = P_{\\text{vent}} \\times \\eta_{\\text{aerog}} \\times c_a = 828{,}08 \\, \\text{kW} \\times 0{,}68 \\times 0{,}42 = 236{,}62 \\, \\text{kW}
+            \\]
+            <br>
+            <strong>c) Energia elèctrica total \\(E_{\\text{total}}\\) generada al parc durant un any:</strong>
+            <br>
+            - Nombre total d'hores operatives a l'any:
+            \\[
+            h = 300 \\, \\text{dies/any} \\times 18 \\, \\text{h/dia} = 5400 \\, \\text{h/any}
+            \\]
+            - Energia generada per un aerogenerador:
+            \\[
+            E_{\\text{útil}} = P_{\\text{útil}} \\times h = 236{,}62 \\, \\text{kW} \\times 5400 \\, \\text{h} = 1277{,}75 \\, \\text{MWh/any}
+            \\]
+            - Energia total generada per 50 aerogeneradors:
+            \\[
+            E_{\\text{total}} = 1277{,}75 \\, \\text{MWh/any} \\times 50 = 63{,}89 \\, \\text{GWh/any}
+            \\]
+            <br>
+            <strong>d) Ingressos del parc eòlic:</strong>
+            <br>
+            - Ingressos totals:
+            \\[
+            Ingressos = E_{\\text{total}} \\times p_{\\text{venda}} = 63{,}89 \\, \\text{GWh/any} \\times 7{,}624 \\, \\text{cèntims/kWh} = 4865{,}9 \\, \\text{k€}
+            \\]
+            <br>
+            <strong>e) Impacte d'una reducció del 10 % en la velocitat del vent:</strong>
+            <br>
+            - Nova velocitat del vent:
+            \\[
+            v_{nou} = 0{,}9 \\times v = 0{,}9 \\times 6{,}94 \\, \\text{m/s} = 6{,}25 \\, \\text{m/s}
+            \\]
+            - Nova potència del vent:
+            \\[
+            P_{\\text{vent, nou}} = \\frac{1}{2} \\times 1{,}225 \\, \\frac{\\text{kg}}{\\text{m}^3} \\times 4657{,}7 \\, \\text{m}^2 \\times (6{,}25 \\, \\text{m/s})^3 = 654{,}8 \\, \\text{kW}
+            \\]
+            - Nova potència útil:
+            \\[
+            P_{\\text{útil, nou}} = 654{,}8 \\, \\text{kW} \\times 0{,}68 \\times 0{,}42 = 187{,}19 \\, \\text{kW}
+            \\]
+            - Nova energia total:
+            \\[
+            E_{\\text{total, nou}} = 187{,}19 \\, \\text{kW} \\times 5400 \\, \\text{h} \\times 50 = 50{,}7 \\, \\text{GWh/any}
+            \\]
+            - Nous ingressos:
+            \\[
+            Ingressos_{nou} = 50{,}7 \\, \\text{GWh/any} \\times 7{,}624 \\, \\text{cèntims/kWh} = 3865{,}58 \\, \\text{k€}
+            \\]
+            - Percentatge de disminució:
+            \\[
+            \\frac{4865{,}9 - 3865{,}58}{4865{,}9} \\times 100 \\approx 20{,}6\\%
+            \\]
+            <br><br>
+            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
+    },
+
+   {
+        type: "exercicis",
+        category: "energia",
+        text: `El complex hidroelèctric de la Noguera de Cardós està format per un conjunt de
+tres centrals hidroelèctriques. La central de Tavascan Superior és la més gran. Té un salt
+d’aigua de h = 882 m i dues turbines que s’alimenten amb un cabal de q = 14 m3/s (7 m3/s cadascuna). Cada turbina subministra Psubm = 57 MW i durant l’any 2024 la central va produir Eanual = 190,4 × 103
+MW h. De mitjana el consum anual d’electricitat d’un habitatge a
+Catalunya és de Econs = 3 400 kW h. Determineu:
+               <br><strong>a)</strong> La potència que es pot obtenir amb el salt d’aigua, Paigua. [1 punt]
+               <br><strong>b)</strong> El rendiment de la central, η. [0,5 punts]
+               <br><strong>c)</strong> Les hores que la central ha estat en funcionament l’any 2024, t. [0,5 punts]
+               <br><strong>d)</strong> La quantitat d’habitatges que la central podria abastir, n.  [0,5 punts]
+               <br><br>
+               <img src="ruta/a/imatgePregunta.jpg" alt="Imatge relacionada amb la pregunta">`,  // Imatge opcional al final de la pregunta
+        correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
+        steps: `
+            <strong>a) Càlcul de la potència mitjana del vent \\(P_{\\text{vent}}\\) per a un aerogenerador:</strong>
+            <br>
+            - Àrea d’escombratge de les pales:
+            \\[
+            A = \\frac{\\pi d^2}{4} = \\frac{\\pi \\times (77 \\, \\text{m})^2}{4} = 4657{,}7 \\, \\text{m}^2
+            \\]
+            - Densitat de l’aire:
+            \\[
+            \\rho = \\frac{1{,}225 \\, \\text{g}}{\\text{m}^3} = 1{,}225 \\, \\frac{\\text{kg}}{\\text{m}^3}
+            \\]
+            - Velocitat del vent (en \\(\\text{m/s}\\)):
+            \\[
+            v = \\frac{25 \\, \\text{km/h}}{3{,}6} = 6{,}94 \\, \\text{m/s}
+            \\]
+            - Potència del vent:
+            \\[
+            P_{\\text{vent}} = \\frac{1}{2} \\times 1{,}225 \\, \\frac{\\text{kg}}{\\text{m}^3} \\times 4657{,}7 \\, \\text{m}^2 \\times (6{,}94 \\, \\text{m/s})^3 = 828{,}08 \\, \\text{kW}
+            \\]
+            <br>
+            <strong>b) Potència elèctrica útil \\(P_{\\text{útil}}\\) generada per cada aerogenerador:</strong>
+            <br>
+            - Aplicant el rendiment de l’aerogenerador:
+            \\[
+            P_{\\text{útil}} = P_{\\text{vent}} \\times \\eta_{\\text{aerog}} \\times c_a = 828{,}08 \\, \\text{kW} \\times 0{,}68 \\times 0{,}42 = 236{,}62 \\, \\text{kW}
+            \\]
+            <br>
+            <strong>c) Energia elèctrica total \\(E_{\\text{total}}\\) generada al parc durant un any:</strong>
+            <br>
+            - Nombre total d'hores operatives a l'any:
+            \\[
+            h = 300 \\, \\text{dies/any} \\times 18 \\, \\text{h/dia} = 5400 \\, \\text{h/any}
+            \\]
+            - Energia generada per un aerogenerador:
+            \\[
+            E_{\\text{útil}} = P_{\\text{útil}} \\times h = 236{,}62 \\, \\text{kW} \\times 5400 \\, \\text{h} = 1277{,}75 \\, \\text{MWh/any}
+            \\]
+            - Energia total generada per 50 aerogeneradors:
+            \\[
+            E_{\\text{total}} = 1277{,}75 \\, \\text{MWh/any} \\times 50 = 63{,}89 \\, \\text{GWh/any}
+            \\]
+            <br>
+            <strong>d) Ingressos del parc eòlic:</strong>
+            <br>
+            - Ingressos totals:
+            \\[
+            Ingressos = E_{\\text{total}} \\times p_{\\text{venda}} = 63{,}89 \\, \\text{GWh/any} \\times 7{,}624 \\, \\text{cèntims/kWh} = 4865{,}9 \\, \\text{k€}
+            \\]
+            <br>
+            <strong>e) Impacte d'una reducció del 10 % en la velocitat del vent:</strong>
+            <br>
+            - Nova velocitat del vent:
+            \\[
+            v_{nou} = 0{,}9 \\times v = 0{,}9 \\times 6{,}94 \\, \\text{m/s} = 6{,}25 \\, \\text{m/s}
+            \\]
+            - Nova potència del vent:
+            \\[
+            P_{\\text{vent, nou}} = \\frac{1}{2} \\times 1{,}225 \\, \\frac{\\text{kg}}{\\text{m}^3} \\times 4657{,}7 \\, \\text{m}^2 \\times (6{,}25 \\, \\text{m/s})^3 = 654{,}8 \\, \\text{kW}
+            \\]
+            - Nova potència útil:
+            \\[
+            P_{\\text{útil, nou}} = 654{,}8 \\, \\text{kW} \\times 0{,}68 \\times 0{,}42 = 187{,}19 \\, \\text{kW}
+            \\]
+            - Nova energia total:
+            \\[
+            E_{\\text{total, nou}} = 187{,}19 \\, \\text{kW} \\times 5400 \\, \\text{h} \\times 50 = 50{,}7 \\, \\text{GWh/any}
+            \\]
+            - Nous ingressos:
+            \\[
+            Ingressos_{nou} = 50{,}7 \\, \\text{GWh/any} \\times 7{,}624 \\, \\text{cèntims/kWh} = 3865{,}58 \\, \\text{k€}
+            \\]
+            - Percentatge de disminució:
+            \\[
+            \\frac{4865{,}9 - 3865{,}58}{4865{,}9} \\times 100 \\approx 20{,}6\\%
+            \\]
+            <br><br>
+            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
+    },
+
+   {
+        type: "exercicis",
+        category: "energia",
+        text: `
+               <br><strong>a)</strong> Determineu la relació del reductor, i = nmot/nhèl, i el parell a l’eix de l’hèlix, Γhèl. [1 punt]
+               <br><strong>b)</strong> Calculeu la potència del motor, Pmot, i el parell que ha de subministrar, Γmot. [1 punt]
+               <br><strong>c)</strong> Justifiqueu la selecció del motor. [0,5 punts]
+               <br><br>
+               <img src="ruta/a/imatgePregunta.jpg" alt="Imatge relacionada amb la pregunta">`,  // Imatge opcional al final de la pregunta
+        correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
+        steps: `
+            <strong>a) Càlcul de la potència mitjana del vent \\(P_{\\text{vent}}\\) per a un aerogenerador:</strong>
+            <br>
+            - Àrea d’escombratge de les pales:
+            \\[
+            A = \\frac{\\pi d^2}{4} = \\frac{\\pi \\times (77 \\, \\text{m})^2}{4} = 4657{,}7 \\, \\text{m}^2
+            \\]
+            - Densitat de l’aire:
+            \\[
+            \\rho = \\frac{1{,}225 \\, \\text{g}}{\\text{m}^3} = 1{,}225 \\, \\frac{\\text{kg}}{\\text{m}^3}
+            \\]
+            - Velocitat del vent (en \\(\\text{m/s}\\)):
+            \\[
+            v = \\frac{25 \\, \\text{km/h}}{3{,}6} = 6{,}94 \\, \\text{m/s}
+            \\]
+            - Potència del vent:
+            \\[
+            P_{\\text{vent}} = \\frac{1}{2} \\times 1{,}225 \\, \\frac{\\text{kg}}{\\text{m}^3} \\times 4657{,}7 \\, \\text{m}^2 \\times (6{,}94 \\, \\text{m/s})^3 = 828{,}08 \\, \\text{kW}
+            \\]
+            <br>
+            <strong>b) Potència elèctrica útil \\(P_{\\text{útil}}\\) generada per cada aerogenerador:</strong>
+            <br>
+            - Aplicant el rendiment de l’aerogenerador:
+            \\[
+            P_{\\text{útil}} = P_{\\text{vent}} \\times \\eta_{\\text{aerog}} \\times c_a = 828{,}08 \\, \\text{kW} \\times 0{,}68 \\times 0{,}42 = 236{,}62 \\, \\text{kW}
+            \\]
+            <br>
+            <strong>c) Energia elèctrica total \\(E_{\\text{total}}\\) generada al parc durant un any:</strong>
+            <br>
+            - Nombre total d'hores operatives a l'any:
+            \\[
+            h = 300 \\, \\text{dies/any} \\times 18 \\, \\text{h/dia} = 5400 \\, \\text{h/any}
+            \\]
+            - Energia generada per un aerogenerador:
+            \\[
+            E_{\\text{útil}} = P_{\\text{útil}} \\times h = 236{,}62 \\, \\text{kW} \\times 5400 \\, \\text{h} = 1277{,}75 \\, \\text{MWh/any}
+            \\]
+            - Energia total generada per 50 aerogeneradors:
+            \\[
+            E_{\\text{total}} = 1277{,}75 \\, \\text{MWh/any} \\times 50 = 63{,}89 \\, \\text{GWh/any}
+            \\]
+            <br>
+            <strong>d) Ingressos del parc eòlic:</strong>
+            <br>
+            - Ingressos totals:
+            \\[
+            Ingressos = E_{\\text{total}} \\times p_{\\text{venda}} = 63{,}89 \\, \\text{GWh/any} \\times 7{,}624 \\, \\text{cèntims/kWh} = 4865{,}9 \\, \\text{k€}
+            \\]
+            <br>
+            <strong>e) Impacte d'una reducció del 10 % en la velocitat del vent:</strong>
+            <br>
+            - Nova velocitat del vent:
+            \\[
+            v_{nou} = 0{,}9 \\times v = 0{,}9 \\times 6{,}94 \\, \\text{m/s} = 6{,}25 \\, \\text{m/s}
+            \\]
+            - Nova potència del vent:
+            \\[
+            P_{\\text{vent, nou}} = \\frac{1}{2} \\times 1{,}225 \\, \\frac{\\text{kg}}{\\text{m}^3} \\times 4657{,}7 \\, \\text{m}^2 \\times (6{,}25 \\, \\text{m/s})^3 = 654{,}8 \\, \\text{kW}
+            \\]
+            - Nova potència útil:
+            \\[
+            P_{\\text{útil, nou}} = 654{,}8 \\, \\text{kW} \\times 0{,}68 \\times 0{,}42 = 187{,}19 \\, \\text{kW}
+            \\]
+            - Nova energia total:
+            \\[
+            E_{\\text{total, nou}} = 187{,}19 \\, \\text{kW} \\times 5400 \\, \\text{h} \\times 50 = 50{,}7 \\, \\text{GWh/any}
+            \\]
+            - Nous ingressos:
+            \\[
+            Ingressos_{nou} = 50{,}7 \\, \\text{GWh/any} \\times 7{,}624 \\, \\text{cèntims/kWh} = 3865{,}58 \\, \\text{k€}
+            \\]
+            - Percentatge de disminució:
+            \\[
+            \\frac{4865{,}9 - 3865{,}58}{4865{,}9} \\times 100 \\approx 20{,}6\\%
+            \\]
+            <br><br>
+            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
+    },
+
+   {
+        type: "exercicis",
+        category: "maquines",
+        text: `La figura mostra l’esquema d’una grua hospitalària que serveix per a aixecar i traslladar
+pacients. La barra ABC, de longitud 3L, està articulada amb l’estructura base al punt A i és
+actuada per un cilindre hidràulic al punt B. Al punt C, per mitjà d’un cable, s’hi subjecta el
+pacient, de massa m = 85 kg, que té el seu centre d’inèrcia a G. La resta d’elements del sistema
+són de massa negligible. Es vol dissenyar com ha de ser l’articulació A perquè pugui suportar
+les soŀlicitacions quan el sistema es troba en equilibri en la configuració φ = 30° i α = 75°. Per
+a fer-ho:
+               <br><strong>a)</strong> Dibuixeu el diagrama de cos lliure de la barra ABC.  [1 punt]
+               <br><strong>b)</strong> La força Fc que ha de fer el cilindre hidràulic. [1 punt]
+               <br><strong>c)</strong> Les forces vertical FV i horitzontal FH a l’articulació A. [0,5 punts]
+               <br><br>
                <img src="ruta/a/imatgePregunta.jpg" alt="Imatge relacionada amb la pregunta">`,  // Imatge opcional al final de la pregunta
         correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
         steps: `
