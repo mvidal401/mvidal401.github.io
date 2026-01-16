@@ -137,18 +137,17 @@ dibuixar el diagrama de portes lògiques.
             <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
         images: `<img src="ruta/a/imatgePregunta.jpg" alt="Imatge relacionada amb la pregunta">`  // Imatge opcional al final de la pregunta
     },
- 
     
-       {
+  {
         type: "questions", // Tipus de pregunta
-        category: "motors",
+        category: "energia",
         text: `Un motor de propà líquid consumeix 7,5 kg/h quan funciona a 2 500 min–1. Si el motor és de quatre temps, quina massa de propà es consumeix en 100 cicles termodinàmics del motor?`,
         options: [
             { text: "20 g", value: "a" },
             { text: "10 g", value: "b" },
             { text: "100 g", value: "c" },
             { text: "200 g", value: "d" }
-        ],
+             ],
         correctAnswer: "d",
         steps: `
             \\[
@@ -176,17 +175,59 @@ dibuixar el diagrama de portes lògiques.
             \\eta = \\frac{2{,}7588 \\times 10^6}{3{,}24 \\times 10^6} \\times 100 = 85{,}15 \\, \\%
             \\]
             <br><br>
-        
+            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
+        images: `<img src="ruta/a/imatgePregunta.jpg" alt="Imatge relacionada amb la pregunta">`  // Imatge opcional al final de la pregunta
     },
-         {
+            
+  {
         type: "questions", // Tipus de pregunta
         category: "energia",
-        text: `Alimentem una resistència de valor R = 17 Ω amb una font de tensió alterna sinusoidal de valor eficaç U = 230 V i de freqüència f = 50 Hz. Quin és el valor màxim de corrent que hi circula?`,
+        text: `Es proposen dues opcions de funicular per a anar entre dos punts d’una muntanya a velocitat constant. L’opció A és el recorregut més curt possible, però amb el pendent més acusat. L’opció B recorre més distància per tal de rebaixar el pendent de la via. En totes dues opcions, els funiculars van a la mateixa velocitat i transporten la mateixa quantitat de persones. Es pot afirmar que l’energia total necessària per a completar el recorregut, sense considerar les pèrdues energètiques,`,
         options: [
-            { text: "13,52 A", value: "a" },
-            { text: "19,13 A", value: "b" },
-            { text: "23,42 A", value: "c" },
-            { text: "27,13 A", value: "d" }
+            { text: "és la mateixa.", value: "a" },
+            { text: "és més gran en l’opció A.", value: "b" },
+            { text: " és més gran en l’opció B.", value: "c" },
+            { text: "200 g", value: "d" }
+             ],
+        correctAnswer: "d",
+        steps: `
+            \\[
+            m = 11 \\, \\text{L} \\times 1000 \\, \\text{g/L} = 11000 \\, \\text{g}
+            \\]
+            \\[
+            \\Delta T = 70 \\, ^\\circ \\text{C} - 10 \\, ^\\circ \\text{C} = 60 \\, ^\\circ \\text{C}
+            \\]
+            \\[
+            Q = m \\times c_e \\times \\Delta T
+            \\]
+            \\[
+            Q = 11000 \\, \\text{g} \\times 4{,}18 \\, \\frac{\\text{J}}{\\text{g} \\cdot ^\\circ \\text{C}} \\times 60 \\, ^\\circ \\text{C}
+            \\]
+            \\[
+            Q = 11000 \\times 4{,}18 \\times 60 = 2{,}7588 \\times 10^6 \\, \\text{J}
+            \\]
+            \\[
+            W = 0{,}9 \\, \\text{kWh} \\times 3600000 \\, \\text{J/kWh} = 3240000 \\, \\text{J}
+            \\]
+            \\[
+            \\eta = \\frac{Q}{W} \\times 100
+            \\]
+            \\[
+            \\eta = \\frac{2{,}7588 \\times 10^6}{3{,}24 \\times 10^6} \\times 100 = 85{,}15 \\, \\%
+            \\]
+            <br><br>
+            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
+        images: `<img src="ruta/a/imatgePregunta.jpg" alt="Imatge relacionada amb la pregunta">`  // Imatge opcional al final de la pregunta
+    },
+     {
+        type: "questions", // Tipus de pregunta
+        category: "energia",
+        text: `Una càrrega elèctrica està formada per una resistència de valor R i una inductància de valor L = 100 mH connectades en sèrie. Quan la càrrega està connectada a una font de tensió alterna sinusoidal de valor U = 230 V de freqüència f = 50 Hz, es mesura que hi circula un corrent de valor I = 2 A. Quin és el valor de la resistència R?`,
+        options: [
+            { text: "84 Ω", value: "a" },
+            { text: "111 Ω", value: "b" },
+            { text: "130 Ω", value: "c" },
+            { text: "230 Ω", value: "d" }
         ],
         correctAnswer: "d",
         steps: `
@@ -218,128 +259,11 @@ dibuixar el diagrama de portes lògiques.
             <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
         images: `<img src="ruta/a/imatgePregunta.jpg" alt="Imatge relacionada amb la pregunta">`  // Imatge opcional al final de la pregunta
     },
+ 
+    
+      
 
-                  {
-        type: "questions", // Tipus de pregunta
-        category: "energia",
-        text: `En un assaig de tracció s’obtenen les corbes tensió-deformació que mostra la figura. Quin dels dos acers té un límit elàstic més alt?`,
-        options: [
-            { text: "L’acer A.", value: "a" },
-            { text: "L’acer B.", value: "b" },
-            { text: "Ambdós tenen el mateix límit elàstic.", value: "c" },
-            { text: "No es pot determinar amb la informació donada.", value: "d" }
-        ],
-        correctAnswer: "d",
-        steps: `
-            \\[
-            m = 11 \\, \\text{L} \\times 1000 \\, \\text{g/L} = 11000 \\, \\text{g}
-            \\]
-            \\[
-            \\Delta T = 70 \\, ^\\circ \\text{C} - 10 \\, ^\\circ \\text{C} = 60 \\, ^\\circ \\text{C}
-            \\]
-            \\[
-            Q = m \\times c_e \\times \\Delta T
-            \\]
-            \\[
-            Q = 11000 \\, \\text{g} \\times 4{,}18 \\, \\frac{\\text{J}}{\\text{g} \\cdot ^\\circ \\text{C}} \\times 60 \\, ^\\circ \\text{C}
-            \\]
-            \\[
-            Q = 11000 \\times 4{,}18 \\times 60 = 2{,}7588 \\times 10^6 \\, \\text{J}
-            \\]
-            \\[
-            W = 0{,}9 \\, \\text{kWh} \\times 3600000 \\, \\text{J/kWh} = 3240000 \\, \\text{J}
-            \\]
-            \\[
-            \\eta = \\frac{Q}{W} \\times 100
-            \\]
-            \\[
-            \\eta = \\frac{2{,}7588 \\times 10^6}{3{,}24 \\times 10^6} \\times 100 = 85{,}15 \\, \\%
-            \\]
-            <br><br>
-            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
-        images: `<img src="ruta/a/imatgePregunta.jpg" alt="Imatge relacionada amb la pregunta">`  // Imatge opcional al final de la pregunta
-    },
-
-                  {
-        type: "questions", // Tipus de pregunta
-        category: "energia",
-        text: `Volem refredar un bloc de coure de 40 kg des de 250 °C fins a 25 °C en una hora. La calor específica del coure és ce = 0,385 kJ/(kg °C). Quanta energia cal extreure del sistema?`,
-        options: [
-            { text: "346,5 W s", value: "a" },
-            { text: "962,5 J", value: "b" },
-            { text: "346,5 W h", value: "c" },
-            { text: "3 465 kJ", value: "d" }
-        ],
-        correctAnswer: "d",
-        steps: `
-            \\[
-            m = 11 \\, \\text{L} \\times 1000 \\, \\text{g/L} = 11000 \\, \\text{g}
-            \\]
-            \\[
-            \\Delta T = 70 \\, ^\\circ \\text{C} - 10 \\, ^\\circ \\text{C} = 60 \\, ^\\circ \\text{C}
-            \\]
-            \\[
-            Q = m \\times c_e \\times \\Delta T
-            \\]
-            \\[
-            Q = 11000 \\, \\text{g} \\times 4{,}18 \\, \\frac{\\text{J}}{\\text{g} \\cdot ^\\circ \\text{C}} \\times 60 \\, ^\\circ \\text{C}
-            \\]
-            \\[
-            Q = 11000 \\times 4{,}18 \\times 60 = 2{,}7588 \\times 10^6 \\, \\text{J}
-            \\]
-            \\[
-            W = 0{,}9 \\, \\text{kWh} \\times 3600000 \\, \\text{J/kWh} = 3240000 \\, \\text{J}
-            \\]
-            \\[
-            \\eta = \\frac{Q}{W} \\times 100
-            \\]
-            \\[
-            \\eta = \\frac{2{,}7588 \\times 10^6}{3{,}24 \\times 10^6} \\times 100 = 85{,}15 \\, \\%
-            \\]
-            <br><br>
-            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
-        images: `<img src="ruta/a/imatgePregunta.jpg" alt="Imatge relacionada amb la pregunta">`  // Imatge opcional al final de la pregunta
-    },
-
-                  {
-        type: "questions", // Tipus de pregunta
-        category: "energia",
-        text: `Alimentem una resistència de valor R = 17 Ω amb una font de tensió alterna sinusoidal de valor eficaç U = 230 V i de freqüència f = 50 Hz. Quin és el valor màxim de corrent que hi circula?`,
-        options: [
-            { text: "13,52 A", value: "a" },
-            { text: "19,13 A", value: "b" },
-            { text: "23,42 A", value: "c" },
-            { text: "27,13 A", value: "d" }
-        ],
-        correctAnswer: "d",
-        steps: `
-            \\[
-            m = 11 \\, \\text{L} \\times 1000 \\, \\text{g/L} = 11000 \\, \\text{g}
-            \\]
-            \\[
-            \\Delta T = 70 \\, ^\\circ \\text{C} - 10 \\, ^\\circ \\text{C} = 60 \\, ^\\circ \\text{C}
-            \\]
-            \\[
-            Q = m \\times c_e \\times \\Delta T
-            \\]
-            \\[
-            Q = 11000 \\, \\text{g} \\times 4{,}18 \\, \\frac{\\text{J}}{\\text{g} \\cdot ^\\circ \\text{C}} \\times 60 \\, ^\\circ \\text{C}
-            \\]
-            \\[
-            Q = 11000 \\times 4{,}18 \\times 60 = 2{,}7588 \\times 10^6 \\, \\text{J}
-            \\]
-            \\[
-            W = 0{,}9 \\, \\text{kWh} \\times 3600000 \\, \\text{J/kWh} = 3240000 \\, \\text{J}
-            \\]
-            \\[
-            \\eta = \\frac{Q}{W} \\times 100
-            \\]
-            \\[
-            \\eta = \\frac{2{,}7588 \\times 10^6}{3{,}24 \\times 10^6} \\times 100 = 85{,}15 \\, \\%
-            \\]
-            <br><br>
-            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
-        images: `<img src="ruta/a/imatgePregunta.jpg" alt="Imatge relacionada amb la pregunta">`  // Imatge opcional al final de la pregunta
-    }
+    
+       
 ];
 
