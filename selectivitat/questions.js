@@ -10,31 +10,16 @@ const questions = [
             { text: "10,05 mm", value: "c" },
             { text: "10,10 mm", value: "d" }
         ],
-        correctAnswer: "d",
+        correctAnswer: "b",
         steps: `
-            \\[
-            m = 11 \\, \\text{L} \\times 1000 \\, \\text{g/L} = 11000 \\, \\text{g}
+           \\[
+            D_{\text{min}} = D_{\\text{nominal}} - \\text{tolerància}
             \\]
             \\[
-            \\Delta T = 70 \\, ^\\circ \\text{C} - 10 \\, ^\\circ \\text{C} = 60 \\, ^\\circ \\text{C}
+            D_{\text{min}} = 10 \\, \\text{mm} - 0{,}05 \\, \text{mm}
             \\]
             \\[
-            Q = m \\times c_e \\times \\Delta T
-            \\]
-            \\[
-            Q = 11000 \\, \\text{g} \\times 4{,}18 \\, \\frac{\\text{J}}{\\text{g} \\cdot ^\\circ \\text{C}} \\times 60 \\, ^\\circ \\text{C}
-            \\]
-            \\[
-            Q = 11000 \\times 4{,}18 \\times 60 = 2{,}7588 \\times 10^6 \\, \\text{J}
-            \\]
-            \\[
-            W = 0{,}9 \\, \\text{kWh} \\times 3600000 \\, \\text{J/kWh} = 3240000 \\, \\text{J}
-            \\]
-            \\[
-            \\eta = \\frac{Q}{W} \\times 100
-            \\]
-            \\[
-            \\eta = \\frac{2{,}7588 \\times 10^6}{3{,}24 \\times 10^6} \\times 100 = 85{,}15 \\, \\%
+            D_{\\text{min}} = 9{,}95 \\, \\text{mm}
             \\]
             <br><br>
             <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
@@ -51,7 +36,7 @@ const questions = [
             { text: "100 g", value: "c" },
             { text: "200 g", value: "d" }
              ],
-        correctAnswer: "d",
+        correctAnswer: "b",
         steps: `
             \\[
             m = 11 \\, \\text{L} \\times 1000 \\, \\text{g/L} = 11000 \\, \\text{g}
@@ -92,7 +77,7 @@ const questions = [
             { text: " és més gran en l’opció B.", value: "c" },
             { text: "depèn de l’acceleració màxima del funicular.", value: "d" }
              ],
-        correctAnswer: "d",
+        correctAnswer: "a",
         steps: `
             \\[
             m = 11 \\, \\text{L} \\times 1000 \\, \\text{g/L} = 11000 \\, \\text{g}
@@ -133,7 +118,7 @@ const questions = [
             { text: "23,42 A", value: "c" },
             { text: "27,13 A", value: "d" }
              ],
-        correctAnswer: "d",
+        correctAnswer: "b",
         steps: `
             \\[
             m = 11 \\, \\text{L} \\times 1000 \\, \\text{g/L} = 11000 \\, \\text{g}
@@ -174,7 +159,7 @@ const questions = [
             { text: "Ambdós tenen el mateix límit elàstic.", value: "c" },
             { text: "No es pot determinar amb la informació donada.", value: "d" }
              ],
-        correctAnswer: "d",
+        correctAnswer: "a",
         steps: `
             \\[
             m = 11 \\, \\text{L} \\times 1000 \\, \\text{g/L} = 11000 \\, \\text{g}
@@ -255,7 +240,7 @@ const questions = [
             { text: "122 μm", value: "c" },
             { text: "151 μm", value: "d" }
              ],
-        correctAnswer: "d",
+        correctAnswer: "a",
         steps: `
             \\[
             m = 11 \\, \\text{L} \\times 1000 \\, \\text{g/L} = 11000 \\, \\text{g}
@@ -296,7 +281,7 @@ const questions = [
             { text: "130 Ω", value: "c" },
             { text: "230 Ω", value: "d" }
         ],
-        correctAnswer: "d",
+        correctAnswer: "b",
         steps: `
             \\[
             m = 11 \\, \\text{L} \\times 1000 \\, \\text{g/L} = 11000 \\, \\text{g}
@@ -337,7 +322,7 @@ const questions = [
             { text: "No es pot determinar amb la informació mostrada.", value: "c" },
             { text: "Tots dos presentaran la mateixa deformació.", value: "d" }
              ],
-        correctAnswer: "d",
+        correctAnswer: "b",
         steps: `
             \\[
             m = 11 \\, \\text{L} \\times 1000 \\, \\text{g/L} = 11000 \\, \\text{g}
@@ -378,7 +363,7 @@ const questions = [
             { text: "", value: "c" },
             { text: "", value: "d" }
              ],
-        correctAnswer: "d",
+        correctAnswer: "c",
         steps: `
             \\[
             m = 11 \\, \\text{L} \\times 1000 \\, \\text{g/L} = 11000 \\, \\text{g}
@@ -461,7 +446,7 @@ const questions = [
             { text: "96 W", value: "c" },
             { text: "120 W", value: "d" }
              ],
-        correctAnswer: "d",
+        correctAnswer: "c",
         steps: `
             \\[
             m = 11 \\, \\text{L} \\times 1000 \\, \\text{g/L} = 11000 \\, \\text{g}
@@ -502,7 +487,7 @@ const questions = [
             { text: "Entre 15,20 mm i 15,26 mm.", value: "c" },
             { text: "Entre 15,19 mm i 15,27 mm.", value: "d" }
              ],
-        correctAnswer: "d",
+        correctAnswer: "a",
         steps: `
             \\[
             m = 11 \\, \\text{L} \\times 1000 \\, \\text{g/L} = 11000 \\, \\text{g}
@@ -584,7 +569,7 @@ const questions = [
             { text: "3,305 min", value: "c" },
             { text: "4,741 min", value: "d" }
              ],
-        correctAnswer: "d",
+        correctAnswer: "c",
         steps: `
             \\[
             m = 11 \\, \\text{L} \\times 1000 \\, \\text{g/L} = 11000 \\, \\text{g}
@@ -628,7 +613,7 @@ El valor de la resistència de l’induït és Ra = 80 mΩ. Quina potència es d
             { text: "1,92 W", value: "c" },
             { text: "23,28 W", value: "d" }
              ],
-        correctAnswer: "d",
+        correctAnswer: "b",
         steps: `
             \\[
             m = 11 \\, \\text{L} \\times 1000 \\, \\text{g/L} = 11000 \\, \\text{g}
@@ -710,7 +695,7 @@ El valor de la resistència de l’induït és Ra = 80 mΩ. Quina potència es d
             { text: "Ambdós tenen la mateixa ductilitat.", value: "c" },
             { text: "No es pot determinar amb la informació donada.", value: "d" }
              ],
-        correctAnswer: "d",
+        correctAnswer: "b",
         steps: `
             \\[
             m = 11 \\, \\text{L} \\times 1000 \\, \\text{g/L} = 11000 \\, \\text{g}
@@ -751,7 +736,7 @@ El valor de la resistència de l’induït és Ra = 80 mΩ. Quina potència es d
             { text: "Entre 25,0 °C i 25,8 °C.", value: "c" },
             { text: "Entre 25,3 °C i 25,5 °C.", value: "d" }
              ],
-        correctAnswer: "d",
+        correctAnswer: "a",
         steps: `
             \\[
             m = 11 \\, \\text{L} \\times 1000 \\, \\text{g/L} = 11000 \\, \\text{g}
@@ -792,7 +777,7 @@ El valor de la resistència de l’induït és Ra = 80 mΩ. Quina potència es d
             { text: "78,38 Ω", value: "c" },
             { text: "80,89 Ω", value: "d" }
              ],
-        correctAnswer: "d",
+        correctAnswer: "c",
         steps: `
             \\[
             m = 11 \\, \\text{L} \\times 1000 \\, \\text{g/L} = 11000 \\, \\text{g}
@@ -833,7 +818,7 @@ El valor de la resistència de l’induït és Ra = 80 mΩ. Quina potència es d
             { text: "41 μm", value: "c" },
             { text: "28 μm", value: "d" }
              ],
-        correctAnswer: "d",
+        correctAnswer: "c",
         steps: `
             \\[
             m = 11 \\, \\text{L} \\times 1000 \\, \\text{g/L} = 11000 \\, \\text{g}
@@ -877,7 +862,7 @@ Quin és el parell nominal?`,
             { text: "7,132 N m", value: "c" },
             { text: "53,42 kN m", value: "d" }
              ],
-        correctAnswer: "d",
+        correctAnswer: "b",
         steps: `
             \\[
             m = 11 \\, \\text{L} \\times 1000 \\, \\text{g/L} = 11000 \\, \\text{g}
