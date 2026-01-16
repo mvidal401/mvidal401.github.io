@@ -37,30 +37,21 @@ const questions = [
             { text: "200 g", value: "d" }
              ],
         correctAnswer: "b",
-        steps: `
+       steps: `
             \\[
-            m = 11 \\, \\text{L} \\times 1000 \\, \\text{g/L} = 11000 \\, \\text{g}
+            \\omega = 2500 \\, \\text{min}^{-1} \\times \\frac{1 \\, \\text{h}}{60 \\, \\text{min}} = 150000 \\, \\text{h}^{-1}
             \\]
             \\[
-            \\Delta T = 70 \\, ^\\circ \\text{C} - 10 \\, ^\\circ \\text{C} = 60 \\, ^\\circ \\text{C}
+            n_{\\text{cicles}} = \\frac{\omega}{2} = \\frac{150000}{2} = 75000 \\, \\text{cicles/h}
             \\]
             \\[
-            Q = m \\times c_e \\times \\Delta T
+            m_{\\text{cicle}} = \\frac{\\text{consum}}{n_{\\text{cicles}}} = \\frac{7{,}5 \\, \\text{kg/h}}{75000 \\, \\text{cicles/h}} = 10^{-4} \\, \\text{kg/cicle}
             \\]
             \\[
-            Q = 11000 \\, \\text{g} \\times 4{,}18 \\, \\frac{\\text{J}}{\\text{g} \\cdot ^\\circ \\text{C}} \\times 60 \\, ^\\circ \\text{C}
+            m_{100} = m_{\\text{cicle}} \\times 100 = 10^{-4} \\, \\text{kg} \\times 100 = 0{,}01 \\, \\text{kg}
             \\]
             \\[
-            Q = 11000 \\times 4{,}18 \\times 60 = 2{,}7588 \\times 10^6 \\, \\text{J}
-            \\]
-            \\[
-            W = 0{,}9 \\, \\text{kWh} \\times 3600000 \\, \\text{J/kWh} = 3240000 \\, \\text{J}
-            \\]
-            \\[
-            \\eta = \\frac{Q}{W} \\times 100
-            \\]
-            \\[
-            \\eta = \\frac{2{,}7588 \\times 10^6}{3{,}24 \\times 10^6} \\times 100 = 85{,}15 \\, \\%
+            m_{100} = 10 \\, \\text{g}
             \\]
             <br><br>
             <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
@@ -78,30 +69,21 @@ const questions = [
             { text: "depèn de l’acceleració màxima del funicular.", value: "d" }
              ],
         correctAnswer: "a",
-        steps: `
+         steps: `
             \\[
-            m = 11 \\, \\text{L} \\times 1000 \\, \\text{g/L} = 11000 \\, \\text{g}
+            E_{\text{mec}} = \\Delta E_p = m \\cdot g \\cdot \\Delta h
             \\]
             \\[
-            \\Delta T = 70 \\, ^\\circ \\text{C} - 10 \\, ^\\circ \\text{C} = 60 \\, ^\\circ \\text{C}
+            \\Delta h_A = h_{\\text{final}} - h_{\\text{inicial}}
             \\]
             \\[
-            Q = m \\times c_e \\times \\Delta T
+            \\Delta h_B = h_{\\text{final}} - h_{\\text{inicial}}
             \\]
             \\[
-            Q = 11000 \\, \\text{g} \\times 4{,}18 \\, \\frac{\\text{J}}{\\text{g} \\cdot ^\\circ \\text{C}} \\times 60 \\, ^\\circ \\text{C}
+            \Delta h_A = \\Delta h_B \\implies \\Delta E_{pA} = \\Delta E_{pB}
             \\]
             \\[
-            Q = 11000 \\times 4{,}18 \\times 60 = 2{,}7588 \\times 10^6 \\, \\text{J}
-            \\]
-            \\[
-            W = 0{,}9 \\, \\text{kWh} \\times 3600000 \\, \\text{J/kWh} = 3240000 \\, \\text{J}
-            \\]
-            \\[
-            \\eta = \\frac{Q}{W} \\times 100
-            \\]
-            \\[
-            \\eta = \\frac{2{,}7588 \\times 10^6}{3{,}24 \\times 10^6} \\times 100 = 85{,}15 \\, \\%
+            E_{\text{total}} = \\text{Constant} \\implies \\text{És la mateixa}
             \\]
             <br><br>
             <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
